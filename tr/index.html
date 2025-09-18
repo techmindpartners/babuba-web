@@ -120,17 +120,17 @@
     <main class="pt-20">
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-            <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="container mx-auto px-6 text-center hero-content">
                 <!-- Hero Logo -->
                 <div class="mb-12 fade-in">
-                    <img src="/assets/images/logo-blue.png" alt="babuba.com" class="h-20 w-56 mx-auto object-contain float-gentle">
+                    <img src="/assets/images/logo-blue.png" alt="babuba.com" class="h-20 w-56 mx-auto object-contain hero-logo">
                 </div>
                 
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 heading-modern">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 hero-title">
                     %100 Elektrikli Geleceğin Adresi
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed fade-in">
+                <p class="text-xl md:text-2xl hero-subtitle mb-8 max-w-4xl mx-auto leading-relaxed fade-in">
                     Türkiye'nin ilk ve tek tam elektrikli araç platformu. İlan ver, araç karşılaştır, şarj noktalarını keşfet.
                 </p>
                 
@@ -138,11 +138,11 @@
                     Sadece elektrikli araçlar için özel olarak tasarlanmış kapsamlı ekosistem. Geleceğin mobilitesi burada başlıyor.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in">
-                    <a href="#features" class="btn-modern px-10 py-4 text-lg">
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
+                    <a href="#features" class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
                         Platformu Keşfet
                     </a>
-                    <a href="#contact" class="px-10 py-4 bg-white/80 backdrop-blur-lg text-primary border-2 border-primary/20 rounded-2xl font-semibold text-lg hover:bg-primary/10 transition-all duration-300 shadow-lg">
+                    <a href="#contact" class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
                         İletişime Geç
                     </a>
                 </div>
@@ -165,7 +165,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
                     <div class="premium-card">
-                        <i class="ph-duotone ph-car text-5xl premium-card-icon mb-6 block"></i>
+                        <i class="ph-duotone ph-car text-5xl icon-car mb-6 block"></i>
                         <h3 class="text-2xl font-bold premium-card-title mb-4">Elektrikli Araç İlanları</h3>
                         <p class="premium-card-content">
                             Sadece tam elektrikli araçlar için özel ilan sistemi. 
@@ -176,7 +176,7 @@
 
                     <!-- Feature 2 -->
                     <div class="premium-card">
-                        <i class="ph-duotone ph-lightning text-5xl premium-card-icon mb-6 block"></i>
+                        <i class="ph-duotone ph-lightning text-5xl icon-lightning mb-6 block"></i>
                         <h3 class="text-2xl font-bold premium-card-title mb-4">Şarj İstasyonu Haritası</h3>
                         <p class="premium-card-content">
                             Türkiye geneli elektrikli araç şarj noktaları. 
@@ -187,7 +187,7 @@
 
                     <!-- Feature 3 -->
                     <div class="premium-card">
-                        <i class="ph-duotone ph-car-profile text-5xl premium-card-icon mb-6 block"></i>
+                        <i class="ph-duotone ph-car-profile text-5xl icon-profile mb-6 block"></i>
                         <h3 class="text-2xl font-bold premium-card-title mb-4">Kapsamlı Araç Veritabanı</h3>
                         <p class="premium-card-content">
                             Detaylı elektrikli araç özellikleri, menzil bilgileri, 
@@ -204,7 +204,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-rocket-launch text-5xl text-primary"></i>
+                        <i class="ph-duotone ph-rocket-launch text-5xl icon-rocket"></i>
                         Geliştirme Aşamaları
                     </h2>
                     <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -212,29 +212,30 @@
                     </p>
                 </div>
 
-                <!-- Phase Tabs -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <button class="phase-tab px-8 py-4 bg-primary text-white rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        1. Faz - İlk Lansman
-                    </button>
-                    <button class="phase-tab px-8 py-4 bg-white text-gray-600 border-2 border-gray-200 rounded-2xl font-semibold text-lg hover:border-primary hover:text-primary transform hover:-translate-y-1 transition-all duration-300">
-                        2. Faz - Coming Soon
-                    </button>
-                </div>
-
-                <!-- Phase Content -->
-                <div class="phase-content-1">
+                <!-- Phase 1 - Current Phase -->
+                <div class="mb-16">
+                    <div class="text-center mb-12">
+                        <div class="inline-flex items-center gap-3 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg mb-4">
+                            <i class="ph-duotone ph-check-circle text-2xl"></i>
+                            1. Faz - Mevcut (2024)
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">İlk Lansman - Temel Özellikler</h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            Platformun temel işlevlerini kapsayan ilk sürüm
+                        </p>
+                    </div>
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-car text-2xl icon-car"></i>
                                 Sıfır & İkinci El Elektrikli Araç İlanları
                             </h4>
                             <p class="text-gray-600 leading-relaxed">Sadece tam elektrikli araçlar için özel ilan sistemi</p>
                         </div>
                         <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car-profile text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-car-profile text-2xl icon-profile"></i>
                                 Kapsamlı Araç Veritabanı
                             </h4>
                             <p class="text-gray-600 leading-relaxed">Kapsamlı %100 elektrikli araç veritabanı ve karşılaştırma</p>
@@ -242,39 +243,51 @@
                     </div>
                 </div>
 
-                <div class="phase-content-2 hidden">
+                <!-- Phase 2 - Future Phase -->
+                <div class="mb-16">
+                    <div class="text-center mb-12">
+                        <div class="inline-flex items-center gap-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg mb-4">
+                            <i class="ph-duotone ph-clock text-2xl"></i>
+                            2. Faz - Gelecek (2025)
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Gelişmiş Özellikler - Coming Soon</h3>
+                        <p class="text-gray-600 max-w-2xl mx-auto">
+                            Platformu daha da güçlendirecek gelişmiş özellikler
+                        </p>
+                    </div>
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-lightning text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-lightning text-2xl icon-lightning"></i>
                                 Şarj İstasyonu Haritası
                             </h4>
                             <p class="text-gray-600 leading-relaxed">Türkiye geneli elektrikli araç şarj noktaları ve rotası planlama</p>
                         </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-users text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-users text-2xl icon-users"></i>
                                 EV Sahipleri Topluluğu
                             </h4>
                             <p class="text-gray-600 leading-relaxed">Elektrikli araç sahipleri için özel forum ve etkinlik platformu</p>
                         </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-wrench text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-wrench text-2xl icon-wrench"></i>
                                 EV Servis & Bakım Ağı
                             </h4>
                             <p class="text-gray-600 leading-relaxed">Elektrikli araçlara özel servis ve bakım hizmetleri</p>
                         </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-chart-line text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-chart-line text-2xl icon-chart"></i>
                                 Akıllı Analitik Dashboard
                             </h4>
                             <p class="text-gray-600 leading-relaxed">Elektrikli araç performans analizi ve enerji tasarrufu önerileri</p>
                         </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
                             <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-mobile text-2xl text-primary"></i>
+                                <i class="ph-duotone ph-mobile text-2xl icon-mobile"></i>
                                 Mobil Uygulama
                             </h4>
                             <p class="text-gray-600 leading-relaxed">iOS ve Android için kapsamlı mobil uygulama</p>
@@ -289,7 +302,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-users-three text-5xl text-primary"></i>
+                        <i class="ph-duotone ph-users-three text-5xl icon-users"></i>
                         Kimler İçin Tasarlandı?
                     </h2>
                     <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -299,25 +312,25 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation">
                     <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-house text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-house text-5xl icon-house mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Bireysel Kullanıcılar</h3>
                         <p class="text-gray-600 leading-relaxed">Elektrikli araç satın almak isteyenler ve mevcut EV sahipleri. İlan verebilir, hizmet alabilir ve araç karşılaştırma yapabilirler.</p>
                     </div>
 
                     <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-buildings text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-buildings text-5xl icon-buildings mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Bayi & Galeriler</h3>
                         <p class="text-gray-600 leading-relaxed">Elektrikli araç satışı yapan bayiler ve galeriler. İlan yönetimi, müşteri takibi ve satış analitiği araçları.</p>
                     </div>
 
                     <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-lightning text-5xl icon-lightning mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Şarj İstasyonu Operatörleri</h3>
                         <p class="text-gray-600 leading-relaxed">Şarj istasyonu işletmecileri. İstasyon yönetimi, rezervasyon sistemi ve kullanım analitiği.</p>
                     </div>
 
                     <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-wrench text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-wrench text-5xl icon-wrench mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Servis & Bakım Merkezleri</h3>
                         <p class="text-gray-600 leading-relaxed">Elektrikli araçlara özel servis veren merkezler. Randevu yönetimi ve teknik destek araçları.</p>
                     </div>
@@ -348,7 +361,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-phone text-5xl text-primary"></i>
+                        <i class="ph-duotone ph-phone text-5xl icon-phone"></i>
                         İletişim & Destek
                     </h2>
                     <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -359,19 +372,19 @@
                 <!-- First Row - 3 items -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 stagger-animation">
                     <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                        <i class="ph-duotone ph-envelope text-5xl text-blue-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-envelope text-5xl icon-envelope mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Genel Bilgi</h4>
                         <a href="mailto:info@babuba.com" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">info@babuba.com</a>
                     </div>
 
                     <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                        <i class="ph-duotone ph-handshake text-5xl text-green-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-handshake text-5xl icon-handshake mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">İş Birliği</h4>
                         <a href="mailto:partnership@babuba.com" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">partnership@babuba.com</a>
                     </div>
 
                     <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                        <i class="ph-duotone ph-linkedin-logo text-5xl text-blue-700 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-linkedin-logo text-5xl icon-linkedin mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">LinkedIn</h4>
                         <a href="https://linkedin.com/company/babuba-ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">babuba-ev</a>
                     </div>
@@ -380,19 +393,19 @@
                 <!-- Second Row - 3 items centered -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center lg:justify-items-stretch lg:max-w-4xl lg:mx-auto">
                     <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
-                        <i class="ph-duotone ph-instagram-logo text-5xl text-pink-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-instagram-logo text-5xl icon-instagram mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Instagram</h4>
                         <a href="https://instagram.com/babuba.ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">@babuba.ev</a>
                     </div>
 
                     <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
-                        <i class="ph-duotone ph-twitter-logo text-5xl text-sky-500 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-twitter-logo text-5xl icon-twitter mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">Twitter</h4>
                         <a href="https://twitter.com/babuba_ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">@babuba_ev</a>
                     </div>
 
                     <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
-                        <i class="ph-duotone ph-youtube-logo text-5xl text-red-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                        <i class="ph-duotone ph-youtube-logo text-5xl icon-youtube mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h4 class="text-xl font-bold text-gray-900 mb-4">YouTube</h4>
                         <a href="https://youtube.com/babuba-elektrikli" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">babuba-elektrikli</a>
                     </div>
