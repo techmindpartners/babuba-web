@@ -57,28 +57,61 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg shadow-primary/5">
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg shadow-primary/5 transition-all duration-300" id="main-header">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
-                <img src="/assets/images/logo-blue.png" alt="babuba.com Logo" class="h-10 w-32 object-contain">
-                
-                <!-- Navigation Menu -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Features</a>
-                    <a href="#phases" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Development</a>
-                    <a href="#target" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Target Audience</a>
-                    <a href="#mission" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Mission</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary font-medium transition-colors duration-200">Contact</a>
-                </nav>
-                
-                <!-- Language Switcher -->
-                <div class="flex items-center space-x-2 bg-white/80 backdrop-blur-lg px-4 py-2 rounded-2xl border border-primary/10 shadow-lg">
-                    <a href="/tr/" class="px-4 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">TR</a>
-                    <a href="/en/" class="px-4 py-2 bg-primary text-white rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">EN</a>
-                    <a href="/zh/" class="px-4 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">中文</a>
-                    <a href="/ar/" class="px-4 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">عربي</a>
+                <div class="flex-shrink-0">
+                    <a href="/en/">
+                        <img src="/assets/images/logo-blue.png" alt="babuba.com Logo" class="h-10 w-32 object-contain hover:scale-105 transition-transform duration-300">
+                    </a>
                 </div>
+                
+                <!-- Right Side: Navigation + Language Switcher -->
+                <div class="flex items-center space-x-6">
+                    <!-- Navigation Menu -->
+                    <nav class="hidden lg:flex items-center space-x-8">
+                        <a href="#features" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
+                            Features
+                        </a>
+                        <a href="#phases" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
+                            Development
+                        </a>
+                        <a href="#target" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
+                            Target Audience
+                        </a>
+                        <a href="#mission" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
+                            Mission
+                        </a>
+                        <a href="#contact" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
+                            Contact
+                        </a>
+                    </nav>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="lg:hidden p-2 text-gray-700 hover:text-primary transition-colors duration-200" id="mobile-menu-btn">
+                        <i class="ph-duotone ph-list text-2xl"></i>
+                    </button>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center space-x-1 bg-white/80 backdrop-blur-lg px-3 py-2 rounded-2xl border border-primary/10 shadow-lg">
+                        <a href="/tr/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">TR</a>
+                        <a href="/en/" class="px-3 py-2 bg-primary text-white rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">EN</a>
+                        <a href="/zh/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">中文</a>
+                        <a href="/ar/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">عربي</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="lg:hidden mt-4 bg-white/95 backdrop-blur-lg rounded-2xl border border-primary/10 shadow-lg p-4 hidden" id="mobile-menu">
+                <nav class="flex flex-col space-y-2">
+                    <a href="#features" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Features</a>
+                    <a href="#phases" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Development</a>
+                    <a href="#target" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Target Audience</a>
+                    <a href="#mission" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Mission</a>
+                    <a href="#contact" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Contact</a>
+                </nav>
             </div>
         </div>
     </header>

@@ -13,6 +13,9 @@ class BabubaApp {
     this.setupScrollEffects();
     this.setupRTLSupport();
     this.updateCurrentYear();
+    this.setupHeaderScroll();
+    this.setupMobileMenu();
+    this.setupActiveNavigation();
   }
 
   // Language Management
@@ -167,6 +170,134 @@ class BabubaApp {
     if (yearSpan) {
       yearSpan.textContent = new Date().getFullYear();
     }
+  }
+
+  // Header scroll effects
+  setupHeaderScroll() {
+    const header = document.getElementById('main-header');
+    if (!header) return;
+
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    const updateHeader = () => {
+      const scrollY = window.scrollY;
+      
+      if (scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScrollY = scrollY;
+      ticking = false;
+    };
+
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateHeader);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick);
+  }
+
+  // Mobile menu functionality
+  setupMobileMenu() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (!mobileMenuBtn || !mobileMenu) return;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('show');
+      
+      // Toggle icon
+      const icon = mobileMenuBtn.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'ph-duotone ph-list text-2xl';
+      } else {
+        icon.className = 'ph-duotone ph-x text-2xl';
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('show');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.className = 'ph-duotone ph-list text-2xl';
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+        mobileMenu.classList.remove('show');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.className = 'ph-duotone ph-list text-2xl';
+      }
+    });
+  }
+
+  // Active navigation tracking
+  setupActiveNavigation() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+    
+    if (sections.length === 0 || navLinks.length === 0) return;
+
+    const updateActiveNav = () => {
+      let current = '';
+      const scrollY = window.scrollY;
+      const headerHeight = 80; // Header height
+      const offset = 50; // Offset for better detection
+
+      // Find the section that's currently in view
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - headerHeight;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        // Check if section is in viewport
+        if (scrollY >= sectionTop - offset) {
+          current = sectionId;
+        }
+      });
+
+      // Update active states
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+
+      // Debug log
+      if (current) {
+        console.log('Active section:', current);
+      }
+    };
+
+    // Throttled scroll listener
+    let ticking = false;
+    const requestTick = () => {
+      if (!ticking) {
+        requestAnimationFrame(updateActiveNav);
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', requestTick);
+    
+    // Initial call
+    updateActiveNav();
   }
 
   // Utility Methods
