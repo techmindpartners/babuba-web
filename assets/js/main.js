@@ -11,61 +11,54 @@ class BabubaApp {
     this.setupLanguageSwitcher();
     this.setupPhaseTabs();
     this.setupScrollEffects();
-    this.setupAnimations();
     this.setupRTLSupport();
-    this.setupMicroInteractions();
-    this.setupParallaxEffects();
     this.updateCurrentYear();
   }
 
   // Language Management
   getCurrentLanguage() {
     const path = window.location.pathname;
-    if (path.startsWith('/tr')) return 'tr';
-    if (path.startsWith('/en')) return 'en';
-    if (path.startsWith('/zh')) return 'zh';
-    if (path.startsWith('/ar')) return 'ar';
-    return 'tr'; // default to Turkish
+    let lang = 'tr'; // default to Turkish
+    
+    if (path.startsWith('/tr')) lang = 'tr';
+    else if (path.startsWith('/en')) lang = 'en';
+    else if (path.startsWith('/zh')) lang = 'zh';
+    else if (path.startsWith('/ar')) lang = 'ar';
+    
+    // Save to localStorage for persistence
+    localStorage.setItem('babuba-language', lang);
+    return lang;
   }
 
   setupLanguageSwitcher() {
-    const langButtons = document.querySelectorAll('.lang-btn');
-    
-    langButtons.forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const lang = btn.dataset.lang;
-        this.switchLanguage(lang);
-      });
-    });
+    // Mark current language as active in language switcher
+    this.updateLanguageSwitcher();
+  }
 
-    // Mark current language as active
-    const currentLangBtn = document.querySelector(`[data-lang="${this.currentLanguage}"]`);
-    if (currentLangBtn) {
-      currentLangBtn.classList.add('active');
-    }
+  updateLanguageSwitcher() {
+    const langLinks = document.querySelectorAll('header a[href^="/"]');
+    
+    langLinks.forEach(link => {
+      // Remove active classes
+      link.classList.remove('bg-primary', 'text-white', 'shadow-md');
+      link.classList.add('text-gray-600', 'hover:text-primary', 'hover:bg-gray-100');
+      
+      // Check if this is the current language
+      const href = link.getAttribute('href');
+      if (href === `/${this.currentLanguage}/` || 
+          (this.currentLanguage === 'tr' && href === '/tr/') ||
+          (this.currentLanguage === 'en' && href === '/en/') ||
+          (this.currentLanguage === 'zh' && href === '/zh/') ||
+          (this.currentLanguage === 'ar' && href === '/ar/')) {
+        link.classList.remove('text-gray-600', 'hover:text-primary', 'hover:bg-gray-100');
+        link.classList.add('bg-primary', 'text-white', 'shadow-md');
+      }
+    });
   }
 
   switchLanguage(lang) {
-    const currentPath = window.location.pathname;
-    const newPath = currentPath.replace(/^\/[a-z]{2}/, `/${lang}`);
-    
-    // Update URL without page reload
-    window.history.pushState({}, '', newPath);
-    
-    // Update active language button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-    
-    this.currentLanguage = lang;
-    
-    // Apply RTL for Arabic
-    this.applyRTLSupport();
-    
-    // Update page content (in a real app, this would load translated content)
-    this.updatePageContent(lang);
+    // Navigate to the language-specific page
+    window.location.href = `/${lang}/`;
   }
 
   updatePageContent(lang) {
@@ -152,58 +145,6 @@ class BabubaApp {
     });
   }
 
-  // Advanced Animation on Scroll
-  setupAnimations() {
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Add staggered animation delays
-          setTimeout(() => {
-            entry.target.classList.add('fade-in');
-            
-            // Add special animations for different elements
-            if (entry.target.classList.contains('group')) {
-              entry.target.classList.add('scale-in');
-            }
-          }, index * 100); // Stagger by 100ms
-        }
-      });
-    }, observerOptions);
-
-    // Observe elements for animation
-    document.querySelectorAll('.group').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Setup staggered animations for grids
-    this.setupStaggeredAnimations();
-  }
-
-  setupStaggeredAnimations() {
-    const staggerObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const children = entry.target.children;
-          Array.from(children).forEach((child, index) => {
-            setTimeout(() => {
-              child.style.opacity = '1';
-              child.style.transform = 'translateY(0)';
-            }, index * 150);
-          });
-        }
-      });
-    }, { threshold: 0.1 });
-
-    // Apply staggered animation to grids
-    document.querySelectorAll('.stagger-animation').forEach(grid => {
-      staggerObserver.observe(grid);
-    });
-  }
 
   // RTL Support for Arabic
   setupRTLSupport() {
@@ -219,88 +160,6 @@ class BabubaApp {
     }
   }
 
-  // Micro-interactions
-  setupMicroInteractions() {
-    // Add ripple effect to buttons
-    document.querySelectorAll('a, button').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        this.createRipple(e);
-      });
-    });
-
-    // Add hover effects to cards
-    document.querySelectorAll('.group').forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-8px) scale(1.02)';
-      });
-      
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-      });
-    });
-
-    // Add typing effect to hero title
-    this.setupTypingEffect();
-  }
-
-  createRipple(e) {
-    const button = e.currentTarget;
-    const ripple = document.createElement('span');
-    const rect = button.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = e.clientX - rect.left - size / 2;
-    const y = e.clientY - rect.top - size / 2;
-
-    ripple.style.width = ripple.style.height = size + 'px';
-    ripple.style.left = x + 'px';
-    ripple.style.top = y + 'px';
-    ripple.classList.add('ripple');
-
-    button.appendChild(ripple);
-
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
-  }
-
-  setupTypingEffect() {
-    const heroTitle = document.querySelector('h1');
-    if (heroTitle) {
-      const text = heroTitle.textContent;
-      heroTitle.textContent = '';
-      heroTitle.style.borderRight = '2px solid #1977ff';
-      
-      let i = 0;
-      const typeWriter = () => {
-        if (i < text.length) {
-          heroTitle.textContent += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 100);
-        } else {
-          // Remove cursor after typing is complete
-          setTimeout(() => {
-            heroTitle.style.borderRight = 'none';
-          }, 1000);
-        }
-      };
-      
-      // Start typing effect after a short delay
-      setTimeout(typeWriter, 500);
-    }
-  }
-
-  // Parallax effects
-  setupParallaxEffects() {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.animate-float');
-      
-      parallaxElements.forEach((element, index) => {
-        const speed = 0.5 + (index * 0.2);
-        element.style.transform = `translateY(${scrolled * speed}px)`;
-      });
-    });
-  }
 
   // Update current year in footer
   updateCurrentYear() {
