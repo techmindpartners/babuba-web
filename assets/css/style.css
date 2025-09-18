@@ -1,9 +1,8 @@
 /* Babuba.com - Essential Styles Only */
 /* Tailwind CSS handles all components and layout */
 
-/* Import Google Fonts */
+/* Import Google Fonts - Only Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gaveto+Rough:wght@400;500;600;700;800;900&display=swap');
 
 /* Import Phosphor Icons */
 @import url('https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css');
@@ -41,36 +40,44 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: var(--gray-800);
   background-color: var(--white);
   overflow-x: hidden;
 }
 
-/* Essential animations only */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+/* Ensure all text uses Inter font */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-/* Animated gradient background for hero section */
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Minimal animations for modern corporate design */
+@keyframes subtleFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Subtle hero gradient */
 .hero-gradient {
-  background: linear-gradient(-45deg, #1977ff, #0d47a1, #e3f2fd, #1977ff, #0d47a1);
-  background-size: 400% 400%;
-  animation: gradientShift 8s ease infinite;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f1f5f9 100%);
+  position: relative;
+}
+
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(25, 119, 255, 0.05) 0%, rgba(13, 71, 161, 0.03) 100%);
+  backdrop-filter: blur(1px);
 }
 
 /* RTL Support for Arabic */
@@ -135,13 +142,13 @@ input:focus {
 }
 
 .nav-link.active {
-  color: #1977ff;
+  color: #1977ff !important;
   font-weight: 600;
+  border-radius: 8px;
 }
 
 .nav-link.active::before {
-  width: 100%;
-  background: linear-gradient(90deg, #1977ff, #0d47a1);
+  width: 100% !important;
 }
 
 /* Mobile Navigation */
@@ -166,13 +173,14 @@ input:focus {
 }
 
 .mobile-nav-link.active {
-  color: #1977ff;
-  background: rgba(25, 119, 255, 0.1);
+  color: #1977ff !important;
+  background: rgba(25, 119, 255, 0.15) !important;
   font-weight: 600;
+  border-radius: 8px;
 }
 
 .mobile-nav-link.active::before {
-  width: 100%;
+  width: 100% !important;
   background: rgba(25, 119, 255, 0.2);
 }
 
@@ -186,6 +194,163 @@ input:focus {
 #mobile-menu.show {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Premium Card Designs - World's Best Practices */
+.premium-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.premium-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1977ff, #0d47a1, #1977ff);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.premium-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(25, 119, 255, 0.03) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(25, 119, 255, 0.1);
+  border-color: rgba(25, 119, 255, 0.2);
+}
+
+.premium-card:hover::after {
+  opacity: 1;
+}
+
+.premium-card-icon {
+  background: linear-gradient(135deg, #1977ff, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover .premium-card-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.premium-card-title {
+  background: linear-gradient(135deg, #1e293b, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.premium-card:hover .premium-card-title {
+  background: linear-gradient(135deg, #1977ff, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.premium-card-content {
+  color: #64748b;
+  line-height: 1.7;
+  transition: color 0.3s ease;
+}
+
+.premium-card:hover .premium-card-content {
+  color: #475569;
+}
+
+/* Shimmer animation for card top border */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Subtle animations */
+.fade-in {
+  animation: subtleFade 0.6s ease-out;
+}
+
+.float-gentle {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* Modern button styles */
+.btn-modern {
+  background: linear-gradient(135deg, #1977ff, #0d47a1);
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(25, 119, 255, 0.3);
+}
+
+.btn-modern:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(25, 119, 255, 0.4);
+}
+
+/* Corporate section styling */
+.section-modern {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  margin: 20px 0;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Icon styling */
+.icon-modern {
+  background: linear-gradient(135deg, #1977ff, #0d47a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Typography improvements */
+.heading-modern {
+  background: linear-gradient(135deg, #1e293b, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Print styles */

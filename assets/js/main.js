@@ -245,59 +245,111 @@ class BabubaApp {
     });
   }
 
-  // Active navigation tracking
+  // Active navigation tracking using Intersection Observer (HTML Best Practice)
   setupActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
     
     if (sections.length === 0 || navLinks.length === 0) return;
 
-    const updateActiveNav = () => {
-      let current = '';
-      const scrollY = window.scrollY;
-      const headerHeight = 80; // Header height
-      const offset = 50; // Offset for better detection
+    // Create a map of section IDs to their corresponding nav links
+    const sectionToNavMap = new Map();
+    sections.forEach(section => {
+      const sectionId = section.getAttribute('id');
+      const correspondingLinks = Array.from(navLinks).filter(link => 
+        link.getAttribute('href') === `#${sectionId}`
+      );
+      sectionToNavMap.set(sectionId, correspondingLinks);
+    });
 
-      // Find the section that's currently in view
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - headerHeight;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
+    // Intersection Observer options
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: '-20% 0px -60% 0px', // Trigger when section is 20% from top
+      threshold: 0.1 // Trigger when 10% of section is visible
+    };
+
+    // Callback function for intersection observer
+    const observerCallback = (entries) => {
+      // Find the section with the highest intersection ratio
+      let mostVisibleSection = null;
+      let highestRatio = 0;
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio > highestRatio) {
+          highestRatio = entry.intersectionRatio;
+          mostVisibleSection = entry.target;
+        }
+      });
+
+      // If we found a visible section, update active states
+      if (mostVisibleSection) {
+        const activeSectionId = mostVisibleSection.getAttribute('id');
         
-        // Check if section is in viewport
-        if (scrollY >= sectionTop - offset) {
-          current = sectionId;
-        }
-      });
+        // Remove active class from all nav links
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+        });
 
-      // Update active states
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href');
-        if (href === `#${current}`) {
-          link.classList.add('active');
+        // Add active class to corresponding nav links
+        const activeLinks = sectionToNavMap.get(activeSectionId);
+        if (activeLinks) {
+          activeLinks.forEach(link => {
+            link.classList.add('active');
+          });
         }
-      });
-
-      // Debug log
-      if (current) {
-        console.log('Active section:', current);
       }
     };
 
-    // Throttled scroll listener
+    // Create and start the observer
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    // Observe all sections
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    // Fallback: If no section is intersecting, check scroll position
+    const fallbackCheck = () => {
+      const scrollY = window.scrollY;
+      const headerHeight = 100;
+      
+      let currentSection = null;
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - headerHeight;
+        if (scrollY >= sectionTop) {
+          currentSection = section;
+        }
+      });
+
+      // If we have a current section and no active links, activate it
+      if (currentSection) {
+        const hasActiveLinks = Array.from(navLinks).some(link => link.classList.contains('active'));
+        if (!hasActiveLinks) {
+          const sectionId = currentSection.getAttribute('id');
+          const activeLinks = sectionToNavMap.get(sectionId);
+          if (activeLinks) {
+            activeLinks.forEach(link => {
+              link.classList.add('active');
+            });
+          }
+        }
+      }
+    };
+
+    // Run fallback check on scroll
     let ticking = false;
     const requestTick = () => {
       if (!ticking) {
-        requestAnimationFrame(updateActiveNav);
+        requestAnimationFrame(fallbackCheck);
         ticking = true;
       }
     };
 
     window.addEventListener('scroll', requestTick);
     
-    // Initial call
-    updateActiveNav();
+    // Initial check
+    fallbackCheck();
   }
 
   // Utility Methods

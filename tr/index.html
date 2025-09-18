@@ -120,33 +120,29 @@
     <main class="pt-20">
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
-            <!-- Background Overlay -->
-            <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
-            
             <div class="container mx-auto px-6 text-center relative z-10">
                 <!-- Hero Logo -->
-                <div class="mb-8 fade-in">
-                    <img src="/assets/images/logo-blue.png" alt="babuba.com" class="h-16 w-48 mx-auto object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-300">
+                <div class="mb-12 fade-in">
+                    <img src="/assets/images/logo-blue.png" alt="babuba.com" class="h-20 w-56 mx-auto object-contain float-gentle">
                 </div>
                 
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 heading-modern">
                     %100 Elektrikli Geleceğin Adresi
                 </h1>
                 
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed fade-in" style="animation-delay: 0.2s;">
+                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed fade-in">
                     Türkiye'nin ilk ve tek tam elektrikli araç platformu. İlan ver, araç karşılaştır, şarj noktalarını keşfet.
                 </p>
                 
-                <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto fade-in" style="animation-delay: 0.4s;">
+                <p class="text-lg text-gray-500 mb-12 max-w-3xl mx-auto fade-in">
                     Sadece elektrikli araçlar için özel olarak tasarlanmış kapsamlı ekosistem. Geleceğin mobilitesi burada başlıyor.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in" style="animation-delay: 0.6s;">
-                    <a href="#features" class="group relative px-8 py-4 bg-primary text-white rounded-2xl font-semibold text-lg shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <span class="relative z-10">Platformu Keşfet</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-dark-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in">
+                    <a href="#features" class="btn-modern px-10 py-4 text-lg">
+                        Platformu Keşfet
                     </a>
-                    <a href="#contact" class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-2xl font-semibold text-lg hover:bg-primary hover:text-white transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
+                    <a href="#contact" class="px-10 py-4 bg-white/80 backdrop-blur-lg text-primary border-2 border-primary/20 rounded-2xl font-semibold text-lg hover:bg-primary/10 transition-all duration-300 shadow-lg">
                         İletişime Geç
                     </a>
                 </div>
@@ -154,62 +150,50 @@
         </section>
 
         <!-- Features Section -->
-        <section id="features" class="py-20 bg-white">
+        <section id="features" class="py-20 bg-gradient-to-br from-gray-50 to-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-lightning text-5xl text-primary"></i>
+                    <h2 class="text-4xl md:text-5xl font-bold heading-modern mb-6 flex items-center justify-center gap-4">
+                        <i class="ph-duotone ph-lightning text-5xl icon-modern"></i>
                         %100 Elektrikli Geleceğin Adresi
                     </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                         Sadece tam elektrikli araçlar için özel olarak tasarlanmış platform
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-car text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Elektrikli Araç İlanları</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Sadece tam elektrikli araçlar için özel ilan sistemi. 
-                                Tesla, BMW i3, Nissan Leaf ve diğer tüm EV modelleri.
-                                Detaylı filtreleme ve karşılaştırma özellikleri.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="premium-card">
+                        <i class="ph-duotone ph-car text-5xl premium-card-icon mb-6 block"></i>
+                        <h3 class="text-2xl font-bold premium-card-title mb-4">Elektrikli Araç İlanları</h3>
+                        <p class="premium-card-content">
+                            Sadece tam elektrikli araçlar için özel ilan sistemi. 
+                            Tesla, BMW i3, Nissan Leaf ve diğer tüm EV modelleri.
+                            Detaylı filtreleme ve karşılaştırma özellikleri.
+                        </p>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer" style="animation-delay: 0.5s;"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Şarj İstasyonu Haritası</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Türkiye geneli elektrikli araç şarj noktaları. 
-                                Gerçek zamanlı durum, rezervasyon ve rota planlama.
-                                Hızlı şarj ve normal şarj seçenekleri.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="premium-card">
+                        <i class="ph-duotone ph-lightning text-5xl premium-card-icon mb-6 block"></i>
+                        <h3 class="text-2xl font-bold premium-card-title mb-4">Şarj İstasyonu Haritası</h3>
+                        <p class="premium-card-content">
+                            Türkiye geneli elektrikli araç şarj noktaları. 
+                            Gerçek zamanlı durum, rezervasyon ve rota planlama.
+                            Hızlı şarj ve normal şarj seçenekleri.
+                        </p>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer" style="animation-delay: 1s;"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-car-profile text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Kapsamlı Araç Veritabanı</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Detaylı elektrikli araç özellikleri, menzil bilgileri, 
-                                şarj süreleri ve kullanıcı deneyimleri. 
-                                Gerçek kullanıcı yorumları ve puanlamaları.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="premium-card">
+                        <i class="ph-duotone ph-car-profile text-5xl premium-card-icon mb-6 block"></i>
+                        <h3 class="text-2xl font-bold premium-card-title mb-4">Kapsamlı Araç Veritabanı</h3>
+                        <p class="premium-card-content">
+                            Detaylı elektrikli araç özellikleri, menzil bilgileri, 
+                            şarj süreleri ve kullanıcı deneyimleri. 
+                            Gerçek kullanıcı yorumları ve puanlamaları.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -346,7 +330,6 @@
             <div class="absolute inset-0 bg-gradient-radial from-white/10 to-transparent"></div>
             <div class="container mx-auto px-6 text-center relative z-10">
                 <div class="mb-12 fade-in">
-                    <img src="/assets/images/logo-white.png" alt="babuba.com" class="h-16 w-48 mx-auto mb-8 filter drop-shadow-2xl">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Misyonumuz</h2>
                     <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8 drop-shadow-md">Elektrikli araç devrimini Türkiye'de hızlandırmak</p>
                 </div>
