@@ -43,12 +43,11 @@
                         'light-blue': '#e3f2fd'
                     },
                     fontFamily: {
-                        'logo': ['Gaveto Rough', 'cursive']
+                        'logo': ['Inter', 'sans-serif']
                     },
                     animation: {
                         'float': 'float 8s ease-in-out infinite',
                         'shimmer': 'shimmer 3s ease-in-out infinite',
-                        'gradient': 'gradientShift 3s ease infinite'
                     }
                 }
             }
@@ -57,28 +56,28 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg shadow-primary/5 transition-all duration-300" id="main-header">
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300" id="main-header" style="background-color: #1a77ff;">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="/en/">
-                        <img src="/assets/images/logo-blue.png" alt="babuba.com Logo" class="h-10 w-32 object-contain hover:scale-105 transition-transform duration-300">
+                        <img src="/assets/images/logo-white.png" alt="babuba.com Logo" class="h-10 w-32 object-contain">
                     </a>
                 </div>
                 
                 <!-- Right Side: Language Switcher + Contact -->
                 <div class="flex items-center space-x-6">
                     <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 bg-white/80 backdrop-blur-lg px-3 py-2 rounded-2xl border border-primary/10 shadow-lg">
-                        <a href="/tr/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">TR</a>
-                        <a href="/en/" class="px-3 py-2 bg-primary text-white rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">EN</a>
-                        <a href="/zh/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">中文</a>
-                        <a href="/ar/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">عربي</a>
+                    <div class="flex items-center space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg">
+                        <a href="/tr/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">TR</a>
+                        <a href="/en/" class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">EN</a>
+                        <a href="/zh/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">中文</a>
+                        <a href="/ar/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">عربي</a>
                     </div>
                     
                     <!-- Contact Button -->
-                    <a href="#contact" class="px-6 py-3 bg-primary text-white rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
                         Contact
                     </a>
                 </div>
@@ -90,7 +89,7 @@
     <!-- Main Content -->
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
             <div class="container mx-auto px-6 text-center hero-content">
                 <!-- Hero Logo -->
                 <div class="mb-12 fade-in">
@@ -110,30 +109,16 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
-                    <a href="#features" class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
-                        Explore Platform
+                    <a href="mailto:info@babuba.com?subject=Stay Informed&body=Hello, I would like to get information about Babuba.com." class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
+                        Stay Informed
                     </a>
                     <a href="#contact" class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
-                        Get in Touch
+                        Partnership
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-lightning text-5xl text-primary"></i>
-                        100% Electric Future Address
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Platform designed exclusively for fully electric vehicles
-                    </p>
-                </div>
-            </div>
-        </section>
 
 
         <!-- Target Audience Section -->
@@ -149,37 +134,37 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation">
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation mb-12">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
                         <i class="ph-duotone ph-house text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Individual Users</h3>
                         <p class="text-gray-600 leading-relaxed">Those who want to buy electric vehicles and existing EV owners. Can list, get services and compare vehicles.</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
                         <i class="ph-duotone ph-buildings text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Dealers & Galleries</h3>
                         <p class="text-gray-600 leading-relaxed">Dealers and galleries selling electric vehicles. Listing management, customer tracking and sales analytics tools.</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
                         <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Charging Station Operators</h3>
                         <p class="text-gray-600 leading-relaxed">Charging station operators. Station management, reservation system and usage analytics.</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
                         <i class="ph-duotone ph-wrench text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Service & Maintenance Centers</h3>
                         <p class="text-gray-600 leading-relaxed">Centers providing special service for electric vehicles. Appointment management and technical support tools.</p>
                     </div>
                 </div>
+                
             </div>
         </section>
 
         <!-- Mission Section -->
-        <section id="mission" class="py-20 bg-gradient-to-br from-primary to-dark-blue text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-radial from-white/10 to-transparent"></div>
+        <section id="mission" class="py-20 bg-primary text-white relative overflow-hidden">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <div class="mb-12 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">Our Mission</h2>
@@ -196,7 +181,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-light-blue/30">
+        <section id="contact" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
@@ -253,16 +238,27 @@
         </section>
     </main>
 
-    <!-- Footer -->    <footer class="bg-gray-900 text-white py-12 relative">
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <img src="/assets/images/logo-white.png" alt="babuba.com" class="h-12 w-36 mx-auto mb-4 filter drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="/assets/images/logo-white.png" alt="babuba.com" style="width: 150px; margin: 0 auto; display: block;">
             </div>
             <p class="text-gray-300 mb-2">© <span id="current-year">2024</span> babuba.com - All rights reserved.</p>
             <p class="text-gray-400 text-sm">Turkey's first and only 100% electric vehicle platform</p>
         </div>
     </footer>
+
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SF84EX7LGX');
+    </script>
 
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>

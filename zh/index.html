@@ -43,12 +43,11 @@
                         'light-blue': '#e3f2fd'
                     },
                     fontFamily: {
-                        'logo': ['Gaveto Rough', 'cursive']
+                        'logo': ['Inter', 'sans-serif']
                     },
                     animation: {
                         'float': 'float 8s ease-in-out infinite',
                         'shimmer': 'shimmer 3s ease-in-out infinite',
-                        'gradient': 'gradientShift 3s ease infinite'
                     }
                 }
             }
@@ -57,49 +56,30 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg shadow-primary/5 transition-all duration-300" id="main-header">
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300" id="main-header" style="background-color: #1a77ff;">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="/zh/">
-                        <img src="/assets/images/logo-blue.png" alt="babuba.com Logo" class="h-10 w-32 object-contain hover:scale-105 transition-transform duration-300">
+                        <img src="/assets/images/logo-white.png" alt="babuba.com Logo" class="h-10 w-32 object-contain">
                     </a>
                 </div>
                 
-                <!-- Right Side: Navigation + Language Switcher -->
+                <!-- Right Side: Language Switcher + Contact -->
                 <div class="flex items-center space-x-6">
-                    <!-- Navigation Menu -->
-                    <nav class="hidden lg:flex items-center space-x-8">
-                        <a href="#features" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            功能
-                        </a>
-                        <a href="#phases" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            开发
-                        </a>
-                        <a href="#target" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            目标用户
-                        </a>
-                        <a href="#mission" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            使命
-                        </a>
-                        <a href="#contact" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            联系我们
-                        </a>
-                    </nav>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="lg:hidden p-2 text-gray-700 hover:text-primary transition-colors duration-200" id="mobile-menu-btn">
-                        <i class="ph-duotone ph-list text-2xl"></i>
-                    </button>
-                    
                     <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 bg-white/80 backdrop-blur-lg px-3 py-2 rounded-2xl border border-primary/10 shadow-lg">
-                        <a href="/tr/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">TR</a>
-                        <a href="/en/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">EN</a>
-                        <a href="/zh/" class="px-3 py-2 bg-primary text-white rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">中文</a>
-                        <a href="/ar/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">عربي</a>
+                    <div class="flex items-center space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg">
+                        <a href="/tr/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">TR</a>
+                        <a href="/en/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">EN</a>
+                        <a href="/zh/" class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">中文</a>
+                        <a href="/ar/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">عربي</a>
                     </div>
+                    
+                    <!-- Contact Button -->
+                    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                        联系我们
+                    </a>
                 </div>
             </div>
             
@@ -119,7 +99,7 @@
     <!-- Main Content -->
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
             <!-- Background Overlay -->
             <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
             
@@ -141,164 +121,18 @@
                     专为电动汽车设计的综合生态系统。移动出行的未来从这里开始。
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in" style="animation-delay: 0.6s;">
-                    <a href="#features" class="group relative px-8 py-4 bg-primary text-white rounded-2xl font-semibold text-lg shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <span class="relative z-10">探索平台</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-dark-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
+                    <a href="mailto:info@babuba.com?subject=保持关注&body=您好，我想了解Babuba.com的相关信息。" class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
+                        保持关注
                     </a>
-                    <a href="#contact" class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-2xl font-semibold text-lg hover:bg-primary hover:text-white transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
-                        联系我们
+                    <a href="#contact" class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
+                        合作
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-lightning text-5xl text-primary"></i>
-                        100% 电动未来的门户
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        专为全电动汽车设计的平台
-                    </p>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation justify-items-center">
-                    <!-- Feature 1 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-car text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">电动汽车列表</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                专为全电动汽车设计的特殊列表系统。 
-                                特斯拉、宝马i3、日产Leaf和所有其他电动汽车型号。
-                                详细的过滤和比较功能。
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer" style="animation-delay: 0.5s;"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Charging Station Map</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Electric vehicle charging points across Turkey. 
-                                Real-time status, reservations and route planning.
-                                Fast charging and normal charging options.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer" style="animation-delay: 1s;"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-car-profile text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Comprehensive Vehicle Database</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                Detailed electric vehicle specifications, range information, 
-                                charging times and user experiences. 
-                                Real user reviews and ratings.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Phase Section -->
-        <section id="phases" class="py-20 bg-gradient-to-br from-gray-50 to-light-blue/30">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-rocket-launch text-5xl text-primary"></i>
-                        开发阶段
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        平台开发过程和未来计划
-                    </p>
-                </div>
-
-                <!-- Phase Tabs -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <button class="phase-tab px-8 py-4 bg-primary text-white rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        第一阶段 - 初始发布
-                    </button>
-                    <button class="phase-tab px-8 py-4 bg-white text-gray-600 border-2 border-gray-200 rounded-2xl font-semibold text-lg hover:border-primary hover:text-primary transform hover:-translate-y-1 transition-all duration-300">
-                        第二阶段 - 即将推出
-                    </button>
-                </div>
-
-                <!-- Phase Content -->
-                <div class="phase-content-1">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car text-2xl text-primary"></i>
-                                新车和二手电动汽车列表
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">专为全电动汽车设计的特殊列表系统</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car-profile text-2xl text-primary"></i>
-                                综合车辆数据库
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">全面的100%电动汽车数据库和比较</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-content-2 hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-lightning text-2xl text-primary"></i>
-                                充电站地图
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">土耳其各地的电动汽车充电点和路线规划</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-users text-2xl text-primary"></i>
-                                电动汽车车主社区
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">专为电动汽车车主打造的特殊论坛和活动平台</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-wrench text-2xl text-primary"></i>
-                                电动汽车服务与维护网络
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">专为电动汽车提供的特殊服务和维护服务</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-chart-line text-2xl text-primary"></i>
-                                智能分析仪表板
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">电动汽车性能分析和节能建议</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-mobile text-2xl text-primary"></i>
-                                移动应用程序
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">适用于iOS和Android的综合移动应用程序</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Target Audience Section -->
         <section id="target" class="py-20 bg-white">
@@ -314,25 +148,25 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation">
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-house text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">个人用户</h3>
                         <p class="text-gray-600 leading-relaxed">想要购买电动汽车的人和现有电动汽车车主。可以发布、获取服务和比较车辆。</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-buildings text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">经销商和展厅</h3>
                         <p class="text-gray-600 leading-relaxed">销售电动汽车的经销商和展厅。列表管理、客户跟踪和销售分析工具。</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">充电站运营商</h3>
                         <p class="text-gray-600 leading-relaxed">充电站运营商。站点管理、预订系统和使用分析。</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-wrench text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">服务与维护中心</h3>
                         <p class="text-gray-600 leading-relaxed">为电动汽车提供特殊服务的中心。预约管理和技术支持工具。</p>
@@ -342,8 +176,7 @@
         </section>
 
         <!-- Mission Section -->
-        <section id="mission" class="py-20 bg-gradient-to-br from-primary to-dark-blue text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-radial from-white/10 to-transparent"></div>
+        <section id="mission" class="py-20 bg-primary text-white relative overflow-hidden">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <div class="mb-12 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">我们的使命</h2>
@@ -360,7 +193,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-light-blue/30">
+        <section id="contact" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
@@ -417,16 +250,27 @@
         </section>
     </main>
 
-    <!-- Footer -->    <footer class="bg-gray-900 text-white py-12 relative">
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <img src="/assets/images/logo-white.png" alt="babuba.com" class="h-12 w-36 mx-auto mb-4 filter drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="/assets/images/logo-white.png" alt="babuba.com" style="width: 150px; margin: 0 auto; display: block;">
             </div>
             <p class="text-gray-300 mb-2">© <span id="current-year">2024</span> babuba.com - 版权所有。</p>
             <p class="text-gray-400 text-sm">土耳其首个也是唯一的100%电动汽车平台</p>
         </div>
     </footer>
+
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SF84EX7LGX');
+    </script>
 
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>

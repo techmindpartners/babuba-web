@@ -43,12 +43,11 @@
                         'light-blue': '#e3f2fd'
                     },
                     fontFamily: {
-                        'logo': ['Gaveto Rough', 'cursive']
+                        'logo': ['Inter', 'sans-serif']
                     },
                     animation: {
                         'float': 'float 8s ease-in-out infinite',
                         'shimmer': 'shimmer 3s ease-in-out infinite',
-                        'gradient': 'gradientShift 3s ease infinite'
                     }
                 }
             }
@@ -57,69 +56,40 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-primary/10 z-50 shadow-lg shadow-primary/5 transition-all duration-300" id="main-header">
+    <header class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300" id="main-header" style="background-color: #1a77ff;">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex-shrink-0">
                     <a href="/ar/">
-                        <img src="/assets/images/logo-blue.png" alt="babuba.com Logo" class="h-10 w-32 object-contain hover:scale-105 transition-transform duration-300">
+                        <img src="/assets/images/logo-white.png" alt="babuba.com Logo" class="h-10 w-32 object-contain">
                     </a>
                 </div>
                 
-                <!-- Right Side: Navigation + Language Switcher -->
-                <div class="flex items-center space-x-6">
-                    <!-- Navigation Menu -->
-                    <nav class="hidden lg:flex items-center space-x-8">
-                        <a href="#features" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            الميزات
-                        </a>
-                        <a href="#phases" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            التطوير
-                        </a>
-                        <a href="#target" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            الجمهور المستهدف
-                        </a>
-                        <a href="#mission" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            المهمة
-                        </a>
-                        <a href="#contact" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            التواصل
-                        </a>
-                    </nav>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="lg:hidden p-2 text-gray-700 hover:text-primary transition-colors duration-200" id="mobile-menu-btn">
-                        <i class="ph-duotone ph-list text-2xl"></i>
-                    </button>
-                    
+                <!-- Right Side: Language Switcher + Contact -->
+                <div class="flex items-center space-x-reverse space-x-6">
                     <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 bg-white/80 backdrop-blur-lg px-3 py-2 rounded-2xl border border-primary/10 shadow-lg">
-                        <a href="/tr/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">TR</a>
-                        <a href="/en/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">EN</a>
-                        <a href="/zh/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">中文</a>
-                        <a href="/ar/" class="px-3 py-2 bg-primary text-white rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">عربي</a>
+                    <div class="flex items-center space-x-reverse space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg">
+                        <a href="/tr/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">TR</a>
+                        <a href="/en/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">EN</a>
+                        <a href="/zh/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">中文</a>
+                        <a href="/ar/" class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">عربي</a>
                     </div>
+                    
+                    <!-- Contact Button -->
+                    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                        التواصل
+                    </a>
                 </div>
             </div>
             
-            <!-- Mobile Navigation Menu -->
-            <div class="lg:hidden mt-4 bg-white/95 backdrop-blur-lg rounded-2xl border border-primary/10 shadow-lg p-4 hidden" id="mobile-menu">
-                <nav class="flex flex-col space-y-2">
-                    <a href="#features" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">الميزات</a>
-                    <a href="#phases" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">التطوير</a>
-                    <a href="#target" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">الجمهور المستهدف</a>
-                    <a href="#mission" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">المهمة</a>
-                    <a href="#contact" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">التواصل</a>
-                </nav>
-            </div>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="pt-20">
         <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
             <!-- Background Overlay -->
             <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
             
@@ -141,164 +111,18 @@
                     نظام بيئي شامل مصمم حصرياً للمركبات الكهربائية. مستقبل التنقل يبدأ هنا.
                 </p>
                 
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in" style="animation-delay: 0.6s;">
-                    <a href="#features" class="group relative px-8 py-4 bg-primary text-white rounded-2xl font-semibold text-lg shadow-xl shadow-primary/25 hover:shadow-2xl hover:shadow-primary/30 transform hover:-translate-y-1 transition-all duration-300 overflow-hidden">
-                        <span class="relative z-10">استكشف المنصة</span>
-                        <div class="absolute inset-0 bg-gradient-to-r from-primary to-dark-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
+                    <a href="mailto:info@babuba.com?subject=ابق على اطلاع&body=مرحباً، أود الحصول على معلومات حول Babuba.com." class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
+                        ابق على اطلاع
                     </a>
-                    <a href="#contact" class="px-8 py-4 bg-white text-primary border-2 border-primary rounded-2xl font-semibold text-lg hover:bg-primary hover:text-white transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
-                        اتصل بنا
+                    <a href="#contact" class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
+                        شراكة
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section id="features" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-lightning text-5xl text-primary"></i>
-                        بوابة المستقبل الكهربائي 100%
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        منصة مصممة حصرياً للمركبات الكهربائية بالكامل
-                    </p>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-animation justify-items-center">
-                    <!-- Feature 1 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-car text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">قوائم المركبات الكهربائية</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                نظام إدراج خاص للمركبات الكهربائية بالكامل فقط. 
-                                تيسلا، بي إم دبليو i3، نيسان ليف وجميع نماذج المركبات الكهربائية الأخرى.
-                                ميزات التصفية والموازنة التفصيلية.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer" style="animation-delay: 0.5s;"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">خريطة محطات الشحن</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                نقاط شحن المركبات الكهربائية في جميع أنحاء تركيا. 
-                                الحالة في الوقت الفعلي، الحجوزات وتخطيط المسار.
-                                خيارات الشحن السريع والشحن العادي.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="group relative bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border border-primary/10 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 overflow-hidden">
-                        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-dark-blue to-primary animate-shimmer" style="animation-delay: 1s;"></div>
-                        <div class="relative z-10">
-                            <i class="ph-duotone ph-car-profile text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">قاعدة بيانات المركبات الشاملة</h3>
-                            <p class="text-gray-600 leading-relaxed">
-                                مواصفات مفصلة للمركبات الكهربائية، معلومات المدى، 
-                                أوقات الشحن وتجارب المستخدمين. 
-                                مراجعات وتقييمات المستخدمين الحقيقية.
-                            </p>
-                        </div>
-                        <div class="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-radial from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Phase Section -->
-        <section id="phases" class="py-20 bg-gradient-to-br from-gray-50 to-light-blue/30">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-rocket-launch text-5xl text-primary"></i>
-                        مراحل التطوير
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        عملية تطوير المنصة والخطط المستقبلية
-                    </p>
-                </div>
-
-                <!-- Phase Tabs -->
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                    <button class="phase-tab px-8 py-4 bg-primary text-white rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                        المرحلة 1 - الإطلاق الأولي
-                    </button>
-                    <button class="phase-tab px-8 py-4 bg-white text-gray-600 border-2 border-gray-200 rounded-2xl font-semibold text-lg hover:border-primary hover:text-primary transform hover:-translate-y-1 transition-all duration-300">
-                        المرحلة 2 - قريباً
-                    </button>
-                </div>
-
-                <!-- Phase Content -->
-                <div class="phase-content-1">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car text-2xl text-primary"></i>
-                                قوائم المركبات الكهربائية الجديدة والمستعملة
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">نظام إدراج خاص للمركبات الكهربائية بالكامل فقط</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car-profile text-2xl text-primary"></i>
-                                قاعدة بيانات المركبات الشاملة
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">قاعدة بيانات شاملة للمركبات الكهربائية 100% والموازنة</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="phase-content-2 hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-lightning text-2xl text-primary"></i>
-                                خريطة محطات الشحن
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">نقاط شحن المركبات الكهربائية في جميع أنحاء تركيا وتخطيط المسار</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-users text-2xl text-primary"></i>
-                                مجتمع مالكي المركبات الكهربائية
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">منتدى خاص ومنصة فعاليات لمالكي المركبات الكهربائية</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-wrench text-2xl text-primary"></i>
-                                شبكة خدمة وصيانة المركبات الكهربائية
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">خدمات خاصة للصيانة والخدمة للمركبات الكهربائية</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-chart-line text-2xl text-primary"></i>
-                                لوحة تحليلات ذكية
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">تحليل أداء المركبات الكهربائية وتوصيات توفير الطاقة</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-mobile text-2xl text-primary"></i>
-                                تطبيق محمول
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">تطبيق محمول شامل لنظامي iOS و Android</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Target Audience Section -->
         <section id="target" class="py-20 bg-white">
@@ -314,25 +138,25 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation">
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-house text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">المستخدمون الأفراد</h3>
                         <p class="text-gray-600 leading-relaxed">الذين يريدون شراء المركبات الكهربائية ومالكو المركبات الكهربائية الحاليون. يمكنهم الإدراج والحصول على الخدمات ومقارنة المركبات.</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-buildings text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">التجار والمعارض</h3>
                         <p class="text-gray-600 leading-relaxed">التجار والمعارض التي تبيع المركبات الكهربائية. إدارة القوائم وتتبع العملاء وأدوات تحليلات المبيعات.</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-lightning text-5xl text-primary mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">مشغلو محطات الشحن</h3>
                         <p class="text-gray-600 leading-relaxed">مشغلو محطات الشحن. إدارة المحطات ونظام الحجز وتحليلات الاستخدام.</p>
                     </div>
 
-                    <div class="group bg-gradient-to-br from-light-blue to-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
                         <i class="ph-duotone ph-wrench text-5xl text-primary mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">مراكز الخدمة والصيانة</h3>
                         <p class="text-gray-600 leading-relaxed">المراكز التي تقدم خدمة خاصة للمركبات الكهربائية. إدارة المواعيد وأدوات الدعم الفني.</p>
@@ -342,8 +166,7 @@
         </section>
 
         <!-- Mission Section -->
-        <section id="mission" class="py-20 bg-gradient-to-br from-primary to-dark-blue text-white relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-radial from-white/10 to-transparent"></div>
+        <section id="mission" class="py-20 bg-primary text-white relative overflow-hidden">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <div class="mb-12 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">مهمتنا</h2>
@@ -360,7 +183,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-light-blue/30">
+        <section id="contact" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 fade-in">
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
@@ -417,16 +240,27 @@
         </section>
     </main>
 
-    <!-- Footer -->    <footer class="bg-gray-900 text-white py-12 relative">
-        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-30"></div>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <img src="/assets/images/logo-white.png" alt="babuba.com" class="h-12 w-36 mx-auto mb-4 filter drop-shadow-lg hover:scale-105 transition-transform duration-300">
+                <img src="/assets/images/logo-white.png" alt="babuba.com" style="width: 150px; margin: 0 auto; display: block;">
             </div>
             <p class="text-gray-300 mb-2">© <span id="current-year">2024</span> babuba.com - جميع الحقوق محفوظة.</p>
             <p class="text-gray-400 text-sm">أول منصة تركية ومُنصة وحيدة للمركبات الكهربائية 100%</p>
         </div>
     </footer>
+
+    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SF84EX7LGX');
+    </script>
 
     <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
