@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babuba.com - 100% 电动汽车平台</title>
-    <meta name="description" content="土耳其首个也是唯一的100%电动汽车平台。电动汽车列表、充电站地图和综合电动汽车指南。">
-    <meta name="keywords" content="电动汽车, 电动车, 特斯拉, 充电站, 电动汽车列表">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Babuba.com - 100% 电动汽车平台">
-    <meta property="og:description" content="土耳其首个也是唯一的100%电动汽车平台">
-    <meta property="og:image" content="/assets/images/logo-blue.png">
-    <meta property="og:url" content="https://babuba.com/zh">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Babuba.com - 100% 电动汽车平台">
-    <meta name="twitter:description" content="土耳其首个也是唯一的100%电动汽车平台">
-    <meta name="twitter:image" content="/assets/images/logo-blue.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/logo-blue.png">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/assets/css/style.css" as="style">
-    <link rel="preload" href="/assets/js/main.js" as="script">
-    
-    <!-- Tailwind Config -->
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Babuba.com - 100% 电动汽车平台</title>
+        <meta name="description"
+            content="土耳其首个也是唯一的100%电动汽车平台。电动汽车列表、充电站地图和综合电动汽车指南。">
+        <meta name="keywords" content="电动汽车, 电动车, 特斯拉, 充电站, 电动汽车列表">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Babuba.com - 100% 电动汽车平台">
+        <meta property="og:description" content="土耳其首个也是唯一的100%电动汽车平台">
+        <meta property="og:image" content="/assets/images/logo-blue.png">
+        <meta property="og:url" content="https://babuba.com/zh">
+        <meta property="og:type" content="website">
+
+        <!-- X Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Babuba.com - 100% 电动汽车平台">
+        <meta name="twitter:description" content="土耳其首个也是唯一的100%电动汽车平台">
+        <meta name="twitter:image" content="/assets/images/logo-blue.png">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/logo-blue.png">
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <!-- Preload critical resources -->
+        <link rel="preload" href="/assets/css/style.css" as="style">
+        <link rel="preload" href="/assets/js/main.js" as="script">
+
+        <!-- Tailwind Config -->
+        <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -53,218 +54,304 @@
             }
         }
     </script>
-</head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300" id="main-header" style="background-color: #1a77ff;">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="/zh/">
-                        <img src="/assets/images/logo-white.png" alt="babuba.com Logo" class="h-10 w-32 object-contain">
-                    </a>
-                </div>
-                
-                <!-- Right Side: Language Switcher + Contact -->
-                <div class="flex items-center space-x-6">
-                    <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg">
-                        <a href="/tr/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">TR</a>
-                        <a href="/en/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">EN</a>
-                        <a href="/zh/" class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">中文</a>
-                        <a href="/ar/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">عربي</a>
+    </head>
+    <body class="bg-gray-50">
+        <!-- Header -->
+        <header
+            class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300"
+            id="main-header" style="background-color: #1a77ff;">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between header-container">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 header-logo">
+                        <a href="/zh/">
+                            <img src="/assets/images/logo-white.png"
+                                alt="babuba.com Logo"
+                                class="h-10 w-32 object-contain">
+                        </a>
                     </div>
-                    
-                    <!-- Contact Button -->
-                    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
-                        联系我们
-                    </a>
+
+                    <!-- Right Side: Contact + Language Switcher -->
+                    <div class="flex items-center space-x-6 header-right">
+                        <!-- Contact Button -->
+                        <a href="#contact"
+                            class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl contact-button">
+                            联系我们
+                        </a>
+
+                        <!-- Language Switcher -->
+                        <div
+                            class="flex items-center space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg language-switcher">
+                            <a href="/tr/"
+                                class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">TR</a>
+                            <a href="/en/"
+                                class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">EN</a>
+                            <a href="/zh/"
+                                class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">中文</a>
+                            <a href="/ar/"
+                                class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">عربي</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation Menu -->
+                <div
+                    class="lg:hidden mt-4 bg-white/95 backdrop-blur-lg rounded-2xl border border-primary/10 shadow-lg p-4 hidden"
+                    id="mobile-menu">
+                    <nav class="flex flex-col space-y-2">
+                        <a href="#features"
+                            class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">功能</a>
+                        <a href="#phases"
+                            class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">开发</a>
+                        <a href="#target"
+                            class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">目标用户</a>
+                        <a href="#mission"
+                            class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">使命</a>
+                        <a href="#contact"
+                            class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">联系我们</a>
+                    </nav>
                 </div>
             </div>
-            
-            <!-- Mobile Navigation Menu -->
-            <div class="lg:hidden mt-4 bg-white/95 backdrop-blur-lg rounded-2xl border border-primary/10 shadow-lg p-4 hidden" id="mobile-menu">
-                <nav class="flex flex-col space-y-2">
-                    <a href="#features" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">功能</a>
-                    <a href="#phases" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">开发</a>
-                    <a href="#target" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">目标用户</a>
-                    <a href="#mission" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">使命</a>
-                    <a href="#contact" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">联系我们</a>
-                </nav>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Content -->
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
-            <!-- Background Overlay -->
-            <div class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
-            
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <!-- Hero Logo -->
-                <div class="mb-8 fade-in">
-                    <img src="/assets/images/logo-blue.png" alt="babuba.com" class="h-16 w-48 mx-auto object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-300">
-                </div>
-                
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900">
-                            100% 电动未来的门户
-                        </h1>
-                
-                <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed fade-in" style="animation-delay: 0.2s;">
-                    土耳其首个也是唯一的全电动汽车平台。发布车辆，比较汽车，发现充电点。
-                </p>
-                
-                <p class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto fade-in" style="animation-delay: 0.4s;">
-                    专为电动汽车设计的综合生态系统。移动出行的未来从这里开始。
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
-                    <a href="mailto:info@babuba.com?subject=保持关注&body=您好，我想了解Babuba.com的相关信息。" class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
-                        保持关注
-                    </a>
-                    <a href="#contact" class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
-                        合作
-                    </a>
-                </div>
-            </div>
-        </section>
+        <!-- Main Content -->
+        <main class="pt-20">
+            <!-- Hero Section -->
+            <section
+                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
+                <!-- Background Overlay -->
+                <div
+                    class="absolute inset-0 bg-white/80 backdrop-blur-sm"></div>
 
+                <div class="container mx-auto px-6 text-center relative z-10">
+                    <!-- Hero Logo -->
+                    <div class="mb-8 fade-in">
+                        <img src="/assets/images/logo-blue.png" alt="babuba.com"
+                            class="h-16 w-48 mx-auto object-contain filter drop-shadow-2xl hover:scale-105 transition-transform duration-300">
+                    </div>
 
+                    <h1
+                        class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-gray-900">
+                        100% 电动未来的门户
+                    </h1>
 
-        <!-- Target Audience Section -->
-        <section id="target" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-users-three text-5xl text-primary"></i>
-                        为谁而设计？
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        为电动汽车生态系统中的所有利益相关者提供综合解决方案
+                    <p
+                        class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed fade-in"
+                        style="animation-delay: 0.2s;">
+                        土耳其首个也是唯一的全电动汽车平台。发布车辆，比较汽车，发现充电点。
                     </p>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation">
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-house text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">个人用户</h3>
-                        <p class="text-gray-600 leading-relaxed">想要购买电动汽车的人和现有电动汽车车主。可以发布、获取服务和比较车辆。</p>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-buildings text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">经销商和展厅</h3>
-                        <p class="text-gray-600 leading-relaxed">销售电动汽车的经销商和展厅。列表管理、客户跟踪和销售分析工具。</p>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">充电站运营商</h3>
-                        <p class="text-gray-600 leading-relaxed">充电站运营商。站点管理、预订系统和使用分析。</p>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
-                        <i class="ph-duotone ph-wrench text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">服务与维护中心</h3>
-                        <p class="text-gray-600 leading-relaxed">为电动汽车提供特殊服务的中心。预约管理和技术支持工具。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission Section -->
-        <section id="mission" class="py-20 bg-primary text-white relative overflow-hidden">
-            <div class="container mx-auto px-6 text-center relative z-10">
-                <div class="mb-12 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">我们的使命</h2>
-                    <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8 drop-shadow-md">加速土耳其的电动汽车革命</p>
-                </div>
-
-                <div class="max-w-4xl mx-auto">
-                    <p class="text-xl md:text-2xl leading-relaxed text-white/95 italic drop-shadow-md fade-in" style="animation-delay: 0.2s;">
-                        "我们正在建设可持续交通的未来。每辆电动汽车都是迈向清洁未来的一步。 
-                        作为Babuba.com，我们的使命是成为这一变革的先锋，提供一个强大的平台，将所有利益相关者聚集在一起。"
+                    <p
+                        class="text-lg text-gray-500 mb-12 max-w-2xl mx-auto fade-in"
+                        style="animation-delay: 0.4s;">
+                        专为电动汽车设计的综合生态系统。移动出行的未来从这里开始。
                     </p>
+
+                    <div
+                        class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
+                        <a
+                            href="mailto:info@babuba.com?subject=保持关注&body=您好，我想了解Babuba.com的相关信息。"
+                            class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
+                            保持关注
+                        </a>
+                        <a href="#contact"
+                            class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
+                            合作
+                        </a>
+                    </div>
                 </div>
+            </section>
+
+            <!-- Target Audience Section -->
+            <section id="target" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2
+                            class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
+                            <i
+                                class="ph-duotone ph-users-three text-5xl text-primary"></i>
+                            为谁而设计？
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            为电动汽车生态系统中的所有利益相关者提供综合解决方案
+                        </p>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation">
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-house text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">个人用户</h3>
+                            <p
+                                class="text-gray-600 leading-relaxed">想要购买电动汽车的人和现有电动汽车车主。可以发布、获取服务和比较车辆。</p>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-buildings text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">经销商和展厅</h3>
+                            <p
+                                class="text-gray-600 leading-relaxed">销售电动汽车的经销商和展厅。列表管理、客户跟踪和销售分析工具。</p>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-lightning text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">充电站运营商</h3>
+                            <p
+                                class="text-gray-600 leading-relaxed">充电站运营商。站点管理、预订系统和使用分析。</p>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-3 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-wrench text-5xl text-gray-900 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">服务与维护中心</h3>
+                            <p
+                                class="text-gray-600 leading-relaxed">为电动汽车提供特殊服务的中心。预约管理和技术支持工具。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section id="mission"
+                class="py-20 bg-primary text-white relative overflow-hidden">
+                <div class="container mx-auto px-6 text-center relative z-10">
+                    <div class="mb-12 fade-in">
+                        <h2
+                            class="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-lg">我们的使命</h2>
+                        <p
+                            class="text-xl text-white/90 max-w-2xl mx-auto mb-8 drop-shadow-md">加速土耳其的电动汽车革命</p>
+                    </div>
+
+                    <div class="max-w-4xl mx-auto">
+                        <p
+                            class="text-xl md:text-2xl leading-relaxed text-white/95 italic drop-shadow-md fade-in"
+                            style="animation-delay: 0.2s;">
+                            "我们正在建设可持续交通的未来。每辆电动汽车都是迈向清洁未来的一步。
+                            作为Babuba.com，我们的使命是成为这一变革的先锋，提供一个强大的平台，将所有利益相关者聚集在一起。"
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2
+                            class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
+                            <i
+                                class="ph-duotone ph-phone text-5xl text-primary"></i>
+                            联系我们和支持
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            与我们联系，开始您的电动汽车之旅
+                        </p>
+                    </div>
+
+                    <!-- First Row - 3 items -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 stagger-animation">
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-envelope text-5xl text-blue-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">一般信息</h4>
+                            <a href="mailto:info@babuba.com"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">info@babuba.com</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-handshake text-5xl text-green-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">合作伙伴</h4>
+                            <a href="mailto:partnership@babuba.com"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">partnership@babuba.com</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
+                            <i
+                                class="ph-duotone ph-linkedin-logo text-5xl text-blue-700 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">LinkedIn</h4>
+                            <a href="https://linkedin.com/company/babuba-ev"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">babuba-ev</a>
+                        </div>
+                    </div>
+
+                    <!-- Second Row - 3 items centered -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center lg:justify-items-stretch lg:max-w-4xl lg:mx-auto">
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
+                            <i
+                                class="ph-duotone ph-instagram-logo text-5xl text-pink-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">Instagram</h4>
+                            <a href="https://instagram.com/babuba.ev"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">@babuba.ev</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
+                            <i
+                                class="ph-duotone ph-x-logo text-5xl text-sky-500 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">X</h4>
+                            <a href="https://twitter.com/babuba_ev"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">@babuba_ev</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
+                            <i
+                                class="ph-duotone ph-youtube-logo text-5xl text-red-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">YouTube</h4>
+                            <a href="https://youtube.com/babuba-elektrikli"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">babuba-elektrikli</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-6 text-center">
+                <div class="mb-8">
+                    <img src="/assets/images/logo-white.png" alt="babuba.com"
+                        style="width: 150px; margin: 0 auto; display: block;">
+                </div>
+                <p class="text-gray-300 mb-2">© <span
+                        id="current-year">2024</span> babuba.com - 版权所有。</p>
+                <p class="text-gray-400 text-sm">土耳其首个也是唯一的100%电动汽车平台</p>
             </div>
-        </section>
+        </footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-phone text-5xl text-primary"></i>
-                        联系我们和支持
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        与我们联系，开始您的电动汽车之旅
-                    </p>
-                </div>
-
-                <!-- First Row - 3 items -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 stagger-animation">
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                        <i class="ph-duotone ph-envelope text-5xl text-blue-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">一般信息</h4>
-                        <a href="mailto:info@babuba.com" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">info@babuba.com</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                        <i class="ph-duotone ph-handshake text-5xl text-green-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">合作伙伴</h4>
-                        <a href="mailto:partnership@babuba.com" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">partnership@babuba.com</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                        <i class="ph-duotone ph-linkedin-logo text-5xl text-blue-700 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">LinkedIn</h4>
-                        <a href="https://linkedin.com/company/babuba-ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">babuba-ev</a>
-                    </div>
-                </div>
-
-                <!-- Second Row - 3 items centered -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center lg:justify-items-stretch lg:max-w-4xl lg:mx-auto">
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
-                        <i class="ph-duotone ph-instagram-logo text-5xl text-pink-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">Instagram</h4>
-                        <a href="https://instagram.com/babuba.ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">@babuba.ev</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
-                        <i class="ph-duotone ph-twitter-logo text-5xl text-sky-500 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">Twitter</h4>
-                        <a href="https://twitter.com/babuba_ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">@babuba_ev</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl shadow-primary/5 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm">
-                        <i class="ph-duotone ph-youtube-logo text-5xl text-red-600 mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">YouTube</h4>
-                        <a href="https://youtube.com/babuba-elektrikli" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">babuba-elektrikli</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-8">
-                <img src="/assets/images/logo-white.png" alt="babuba.com" style="width: 150px; margin: 0 auto; display: block;">
-            </div>
-            <p class="text-gray-300 mb-2">© <span id="current-year">2024</span> babuba.com - 版权所有。</p>
-            <p class="text-gray-400 text-sm">土耳其首个也是唯一的100%电动汽车平台</p>
-        </div>
-    </footer>
-
-    <!-- Google Analytics -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
-    <script>
+        <!-- Google Analytics -->
+        <!-- Google tag (gtag.js) -->
+        <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
+        <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -272,7 +359,7 @@
       gtag('config', 'G-SF84EX7LGX');
     </script>
 
-    <!-- JavaScript -->
-    <script src="/assets/js/main.js"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="/assets/js/main.js"></script>
+    </body>
 </html>

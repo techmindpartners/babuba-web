@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="tr" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Babuba.com - %100 Elektrikli Araç Platformu</title>
-    <meta name="description" content="Türkiye'nin ilk ve tek %100 elektrikli araç platformu. Elektrikli araç ilanları, şarj istasyonu haritası ve kapsamlı EV rehberi.">
-    <meta name="keywords" content="elektrikli araç, EV, Tesla, şarj istasyonu, elektrikli araç ilanları">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Babuba.com - %100 Elektrikli Araç Platformu">
-    <meta property="og:description" content="Türkiye'nin ilk ve tek %100 elektrikli araç platformu">
-    <meta property="og:image" content="/assets/images/logo-blue.png">
-    <meta property="og:url" content="https://babuba.com/tr">
-    <meta property="og:type" content="website">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Babuba.com - %100 Elektrikli Araç Platformu">
-    <meta name="twitter:description" content="Türkiye'nin ilk ve tek %100 elektrikli araç platformu">
-    <meta name="twitter:image" content="/assets/images/logo-blue.png">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/logo-blue.png">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="/assets/css/style.css" as="style">
-    <link rel="preload" href="/assets/js/main.js" as="script">
-    
-    <!-- Tailwind Config -->
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Babuba.com - %100 Elektrikli Araç Platformu</title>
+        <meta name="description"
+            content="Türkiye'nin ilk ve tek %100 elektrikli araç platformu. Elektrikli araç ilanları, şarj istasyonu haritası ve kapsamlı EV rehberi.">
+        <meta name="keywords"
+            content="elektrikli araç, EV, Tesla, şarj istasyonu, elektrikli araç ilanları">
+
+        <!-- Open Graph -->
+        <meta property="og:title"
+            content="Babuba.com - %100 Elektrikli Araç Platformu">
+        <meta property="og:description"
+            content="Türkiye'nin ilk ve tek %100 elektrikli araç platformu">
+        <meta property="og:image" content="/assets/images/logo-blue.png">
+        <meta property="og:url" content="https://babuba.com/tr">
+        <meta property="og:type" content="website">
+
+        <!-- X Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title"
+            content="Babuba.com - %100 Elektrikli Araç Platformu">
+        <meta name="twitter:description"
+            content="Türkiye'nin ilk ve tek %100 elektrikli araç platformu">
+        <meta name="twitter:image" content="/assets/images/logo-blue.png">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="/assets/images/logo-blue.png">
+
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <!-- Preload critical resources -->
+        <link rel="preload" href="/assets/css/style.css" as="style">
+        <link rel="preload" href="/assets/js/main.js" as="script">
+
+        <!-- Tailwind Config -->
+        <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -53,208 +59,306 @@
             }
         }
     </script>
-</head>
-<body class="bg-gray-50">
-    <!-- Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300" id="main-header" style="background-color: #1a77ff;">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between header-container">
-                <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="/tr/">
-                        <img src="/assets/images/logo-white.png" alt="babuba.com Logo" class="h-10 w-32 object-contain">
-                    </a>
-                </div>
-                
-                <!-- Right Side: Language Switcher + Contact -->
-                <div class="flex items-center space-x-6 header-right">
-                    <!-- Language Switcher -->
-                    <div class="flex items-center space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg language-switcher">
-                        <a href="/tr/" class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">TR</a>
-                        <a href="/en/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">EN</a>
-                        <a href="/zh/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">中文</a>
-                        <a href="/ar/" class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">عربي</a>
+    </head>
+    <body class="bg-gray-50">
+        <!-- Header -->
+        <header
+            class="fixed top-0 left-0 right-0 z-50 shadow-lg transition-all duration-300"
+            id="main-header" style="background-color: #1a77ff;">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between header-container">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 header-logo">
+                        <a href="/tr/">
+                            <img src="/assets/images/logo-white.png"
+                                alt="babuba.com Logo"
+                                class="h-10 w-32 object-contain">
+                        </a>
                     </div>
-                    
-                    <!-- Contact Button -->
-                    <a href="#contact" class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
-                        İletişim
-                    </a>
+
+                    <!-- Right Side: Contact + Language Switcher -->
+                    <div class="flex items-center space-x-6 header-right">
+                        <!-- Contact Button -->
+                        <a href="#contact"
+                            class="px-6 py-3 bg-white text-blue-600 rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl contact-button">
+                            İletişim
+                        </a>
+
+                        <!-- Language Switcher -->
+                        <div
+                            class="flex items-center space-x-1 bg-white/20 backdrop-blur-lg px-3 py-2 rounded-2xl border border-white/20 shadow-lg language-switcher">
+                            <a href="/tr/"
+                                class="px-3 py-2 lang-active rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">TR</a>
+                            <a href="/en/"
+                                class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">EN</a>
+                            <a href="/zh/"
+                                class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">中文</a>
+                            <a href="/ar/"
+                                class="px-3 py-2 lang-inactive hover:bg-white/20 rounded-xl font-semibold text-sm transition-all duration-200">عربي</a>
+                        </div>
+                    </div>
                 </div>
+
             </div>
-            
-        </div>
-    </header>
+        </header>
 
-    <!-- Main Content -->
-    <main class="pt-20">
-        <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
-            <div class="container mx-auto px-6 text-center hero-content">
-                <!-- Hero Logo -->
-                <div class="mb-12 fade-in">
-                    <img src="/assets/images/logo-blue.png" alt="babuba.com" class="h-20 w-56 mx-auto object-contain hero-logo">
-                </div>
-                
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 hero-title">
-                    %100 Elektrikli Geleceğin Adresi
-                </h1>
-                
-                <p class="text-xl md:text-2xl hero-subtitle mb-8 max-w-4xl mx-auto leading-relaxed fade-in">
-                    Türkiye'nin ilk ve tek tam elektrikli araç platformu. İlan ver, araç karşılaştır, şarj noktalarını keşfet.
-                </p>
-                
-                <p class="text-lg text-gray-500 mb-12 max-w-3xl mx-auto fade-in">
-                    Sadece elektrikli araçlar için özel olarak tasarlanmış kapsamlı ekosistem. Geleceğin mobilitesi burada başlıyor.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
-                    <a href="mailto:info@babuba.com?subject=Haberdar Ol&body=Merhaba, Babuba.com hakkında bilgi almak istiyorum." class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
-                        Haberdar Ol
-                    </a>
-                    <a href="#contact" class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
-                        İşbirliği
-                    </a>
-                </div>
-            </div>
-        </section>
+        <!-- Main Content -->
+        <main class="pt-20">
+            <!-- Hero Section -->
+            <section
+                class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50">
+                <div class="container mx-auto px-6 text-center hero-content">
+                    <!-- Hero Logo -->
+                    <div class="mb-12 fade-in">
+                        <img src="/assets/images/logo-blue.png" alt="babuba.com"
+                            class="h-20 w-56 mx-auto object-contain hero-logo">
+                    </div>
 
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 hero-title">
+                        %100 Elektrikli Geleceğin Adresi
+                    </h1>
 
-
-        <!-- Target Audience Section -->
-        <section id="target" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-users-three text-5xl icon-users"></i>
-                        Kimler İçin Tasarlandı?
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Elektrikli araç ekosistemindeki tüm paydaşlar için kapsamlı çözümler
+                    <p
+                        class="text-xl md:text-2xl hero-subtitle mb-8 max-w-4xl mx-auto leading-relaxed fade-in">
+                        Türkiye'nin ilk ve tek tam elektrikli araç platformu.
+                        İlan ver, araç karşılaştır, şarj noktalarını keşfet.
                     </p>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation mb-12">
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-house text-5xl icon-house mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Bireysel Kullanıcılar</h3>
-                        <p class="text-gray-600 leading-relaxed">Elektrikli araç satın almak isteyenler ve mevcut EV sahipleri. İlan verebilir, hizmet alabilir ve araç karşılaştırma yapabilirler.</p>
-                    </div>
+                    <p
+                        class="text-lg text-gray-500 mb-12 max-w-3xl mx-auto fade-in hero-description">
+                        Sadece elektrikli araçlar için özel olarak tasarlanmış
+                        kapsamlı ekosistem. Geleceğin mobilitesi burada
+                        başlıyor.
+                    </p>
 
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-buildings text-5xl icon-buildings mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Bayi & Galeriler</h3>
-                        <p class="text-gray-600 leading-relaxed">Elektrikli araç satışı yapan bayiler ve galeriler. İlan yönetimi, müşteri takibi ve satış analitiği araçları.</p>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-lightning text-5xl icon-lightning mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Şarj İstasyonu Operatörleri</h3>
-                        <p class="text-gray-600 leading-relaxed">Şarj istasyonu işletmecileri. İstasyon yönetimi, rezervasyon sistemi ve kullanım analitiği.</p>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-wrench text-5xl icon-wrench mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300">Servis & Bakım Merkezleri</h3>
-                        <p class="text-gray-600 leading-relaxed">Elektrikli araçlara özel servis veren merkezler. Randevu yönetimi ve teknik destek araçları.</p>
+                    <div
+                        class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
+                        <a
+                            href="mailto:info@babuba.com?subject=Haberdar Ol&body=Merhaba, Babuba.com hakkında bilgi almak istiyorum."
+                            class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
+                            Haberdar Ol
+                        </a>
+                        <a href="#contact"
+                            class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
+                            İşbirliği
+                        </a>
                     </div>
                 </div>
-                
-            </div>
-        </section>
+            </section>
 
-        <!-- Mission Section -->
-        <section id="mission" class="py-20 bg-primary text-white">
+            <!-- Target Audience Section -->
+            <section id="target" class="py-20 bg-white">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2
+                            class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4 section-title">
+                            <i
+                                class="ph-duotone ph-users-three text-5xl icon-users"></i>
+                            Kimler İçin Tasarlandı?
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Elektrikli araç ekosistemindeki tüm paydaşlar için
+                            kapsamlı çözümler
+                        </p>
+                    </div>
+
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 stagger-animation mb-12">
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-house text-5xl icon-house mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 card-title">Bireysel
+                                Kullanıcılar</h3>
+                            <p class="text-gray-600 leading-relaxed">Elektrikli
+                                araç satın almak isteyenler ve mevcut EV
+                                sahipleri. İlan verebilir, hizmet alabilir ve
+                                araç karşılaştırma yapabilirler.</p>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-buildings text-5xl icon-buildings mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 card-title">Bayi
+                                & Galeriler</h3>
+                            <p class="text-gray-600 leading-relaxed">Elektrikli
+                                araç satışı yapan bayiler ve galeriler. İlan
+                                yönetimi, müşteri takibi ve satış analitiği
+                                araçları.</p>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-lightning text-5xl icon-lightning mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 card-title">Şarj
+                                İstasyonu Operatörleri</h3>
+                            <p class="text-gray-600 leading-relaxed">Şarj
+                                istasyonu işletmecileri. İstasyon yönetimi,
+                                rezervasyon sistemi ve kullanım analitiği.</p>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-3 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-wrench text-5xl icon-wrench mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h3
+                                class="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary transition-colors duration-300 card-title">Servis
+                                & Bakım Merkezleri</h3>
+                            <p class="text-gray-600 leading-relaxed">Elektrikli
+                                araçlara özel servis veren merkezler. Randevu
+                                yönetimi ve teknik destek araçları.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Mission Section -->
+            <section id="mission" class="py-20 bg-primary text-white">
+                <div class="container mx-auto px-6 text-center">
+                    <div class="mb-12 fade-in">
+                        <h2
+                            class="text-3xl md:text-4xl font-bold mb-6 text-white mission-title">Misyonumuz</h2>
+                        <p
+                            class="text-xl text-white/90 max-w-2xl mx-auto mb-8">Elektrikli
+                            araç devrimini Türkiye'de hızlandırmak</p>
+                    </div>
+
+                    <div class="max-w-4xl mx-auto mb-12">
+                        <p
+                            class="text-xl md:text-2xl leading-relaxed text-white/95 italic fade-in"
+                            style="animation-delay: 0.2s;">
+                            "Sürdürülebilir ulaşımın geleceğini bugünden inşa
+                            ediyoruz. Her elektrikli araç, temiz bir geleceğe
+                            atılan bir adımdır.
+                            Babuba.com olarak, bu dönüşümün öncüsü olmak ve tüm
+                            paydaşları bir araya getiren güçlü bir platform
+                            sunmak misyonumuz."
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 fade-in">
+                        <h2
+                            class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4 section-title">
+                            <i
+                                class="ph-duotone ph-phone text-5xl icon-phone"></i>
+                            İletişim & Destek
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Bizimle iletişime geçin ve elektrikli araç
+                            yolculuğunuza başlayın
+                        </p>
+                    </div>
+
+                    <!-- First Row - 3 items -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 stagger-animation">
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-envelope text-5xl icon-envelope mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">Genel
+                                Bilgi</h4>
+                            <a href="mailto:info@babuba.com"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">info@babuba.com</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-handshake text-5xl icon-handshake mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4 class="text-xl font-bold text-gray-900 mb-4">İş
+                                Birliği</h4>
+                            <a href="mailto:partnership@babuba.com"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">partnership@babuba.com</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-100">
+                            <i
+                                class="ph-duotone ph-linkedin-logo text-5xl icon-linkedin mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">LinkedIn</h4>
+                            <a href="https://linkedin.com/company/babuba-ev"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">babuba-ev</a>
+                        </div>
+                    </div>
+
+                    <!-- Second Row - 3 items centered -->
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center lg:justify-items-stretch lg:max-w-4xl lg:mx-auto mb-12">
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm border border-gray-100">
+                            <i
+                                class="ph-duotone ph-instagram-logo text-5xl icon-instagram mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">Instagram</h4>
+                            <a href="https://instagram.com/babuba.ev"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">@babuba.ev</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm border border-gray-100">
+                            <i
+                                class="ph-duotone ph-x-logo text-5xl icon-x mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">X</h4>
+                            <a href="https://twitter.com/babuba_ev"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">@babuba_ev</a>
+                        </div>
+
+                        <div
+                            class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm border border-gray-100">
+                            <i
+                                class="ph-duotone ph-youtube-logo text-5xl icon-youtube mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
+                            <h4
+                                class="text-xl font-bold text-gray-900 mb-4">YouTube</h4>
+                            <a href="https://youtube.com/babuba-elektrikli"
+                                class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300"
+                                target="_blank">babuba-elektrikli</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white py-12">
             <div class="container mx-auto px-6 text-center">
-                <div class="mb-12 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">Misyonumuz</h2>
-                    <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8">Elektrikli araç devrimini Türkiye'de hızlandırmak</p>
+                <div class="mb-8">
+                    <img src="/assets/images/logo-white.png" alt="babuba.com"
+                        style="width: 150px; margin: 0 auto; display: block;">
                 </div>
-
-                <div class="max-w-4xl mx-auto mb-12">
-                    <p class="text-xl md:text-2xl leading-relaxed text-white/95 italic fade-in" style="animation-delay: 0.2s;">
-                        "Sürdürülebilir ulaşımın geleceğini bugünden inşa ediyoruz. Her elektrikli araç, temiz bir geleceğe atılan bir adımdır. 
-                        Babuba.com olarak, bu dönüşümün öncüsü olmak ve tüm paydaşları bir araya getiren güçlü bir platform sunmak misyonumuz."
-                    </p>
-                </div>
-                
+                <p class="text-gray-300 mb-2">© <span
+                        id="current-year">2024</span> babuba.com - Tüm hakları
+                    saklıdır.</p>
+                <p class="text-gray-400 text-sm">Türkiye'nin ilk ve tek %100
+                    elektrikli araç platformu</p>
             </div>
-        </section>
+        </footer>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-phone text-5xl icon-phone"></i>
-                        İletişim & Destek
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Bizimle iletişime geçin ve elektrikli araç yolculuğunuza başlayın
-                    </p>
-                </div>
-
-                <!-- First Row - 3 items -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 stagger-animation">
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-envelope text-5xl icon-envelope mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">Genel Bilgi</h4>
-                        <a href="mailto:info@babuba.com" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">info@babuba.com</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-handshake text-5xl icon-handshake mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">İş Birliği</h4>
-                        <a href="mailto:partnership@babuba.com" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300">partnership@babuba.com</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 border border-gray-100">
-                        <i class="ph-duotone ph-linkedin-logo text-5xl icon-linkedin mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">LinkedIn</h4>
-                        <a href="https://linkedin.com/company/babuba-ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">babuba-ev</a>
-                    </div>
-                </div>
-
-                <!-- Second Row - 3 items centered -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center lg:justify-items-stretch lg:max-w-4xl lg:mx-auto mb-12">
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm border border-gray-100">
-                        <i class="ph-duotone ph-instagram-logo text-5xl icon-instagram mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">Instagram</h4>
-                        <a href="https://instagram.com/babuba.ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">@babuba.ev</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm border border-gray-100">
-                        <i class="ph-duotone ph-twitter-logo text-5xl icon-twitter mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">X</h4>
-                        <a href="https://twitter.com/babuba_ev" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">@babuba_ev</a>
-                    </div>
-
-                    <div class="group bg-white p-8 rounded-3xl text-center shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 w-full max-w-sm border border-gray-100">
-                        <i class="ph-duotone ph-youtube-logo text-5xl icon-youtube mb-6 block group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300"></i>
-                        <h4 class="text-xl font-bold text-gray-900 mb-4">YouTube</h4>
-                        <a href="https://youtube.com/babuba-elektrikli" class="text-primary font-semibold hover:text-dark-blue transition-colors duration-300" target="_blank">babuba-elektrikli</a>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-8">
-                <img src="/assets/images/logo-white.png" alt="babuba.com" style="width: 150px; margin: 0 auto; display: block;">
-            </div>
-            <p class="text-gray-300 mb-2">© <span id="current-year">2024</span> babuba.com - Tüm hakları saklıdır.</p>
-            <p class="text-gray-400 text-sm">Türkiye'nin ilk ve tek %100 elektrikli araç platformu</p>
-        </div>
-    </footer>
-
-    <!-- Google Analytics -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
-    <script>
+        <!-- Google Analytics -->
+        <!-- Google tag (gtag.js) -->
+        <script async
+            src="https://www.googletagmanager.com/gtag/js?id=G-SF84EX7LGX"></script>
+        <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
@@ -262,7 +366,7 @@
       gtag('config', 'G-SF84EX7LGX');
     </script>
 
-    <!-- JavaScript -->
-    <script src="/assets/js/main.js"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="/assets/js/main.js"></script>
+    </body>
 </html>
