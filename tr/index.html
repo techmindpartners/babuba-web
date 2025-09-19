@@ -67,32 +67,8 @@
                     </a>
                 </div>
                 
-                <!-- Right Side: Navigation + Language Switcher -->
+                <!-- Right Side: Language Switcher + Contact -->
                 <div class="flex items-center space-x-6">
-                    <!-- Navigation Menu -->
-                    <nav class="hidden lg:flex items-center space-x-8">
-                        <a href="#features" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            Özellikler
-                        </a>
-                        <a href="#phases" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            Geliştirme
-                        </a>
-                        <a href="#target" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            Hedef Kitle
-                        </a>
-                        <a href="#mission" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            Misyon
-                        </a>
-                        <a href="#contact" class="nav-link px-3 py-2 text-gray-700 hover:text-primary font-medium transition-all duration-300 relative">
-                            İletişim
-                        </a>
-                    </nav>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button class="lg:hidden p-2 text-gray-700 hover:text-primary transition-colors duration-200" id="mobile-menu-btn">
-                        <i class="ph-duotone ph-list text-2xl"></i>
-                    </button>
-                    
                     <!-- Language Switcher -->
                     <div class="flex items-center space-x-1 bg-white/80 backdrop-blur-lg px-3 py-2 rounded-2xl border border-primary/10 shadow-lg">
                         <a href="/tr/" class="px-3 py-2 bg-primary text-white rounded-xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-md">TR</a>
@@ -100,19 +76,14 @@
                         <a href="/zh/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">中文</a>
                         <a href="/ar/" class="px-3 py-2 text-gray-600 hover:text-primary rounded-xl font-semibold text-sm transition-all duration-200 hover:bg-gray-100">عربي</a>
                     </div>
+                    
+                    <!-- Contact Button -->
+                    <a href="#contact" class="px-6 py-3 bg-primary text-white rounded-2xl font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl">
+                        İletişim
+                    </a>
                 </div>
             </div>
             
-            <!-- Mobile Navigation Menu -->
-            <div class="lg:hidden mt-4 bg-white/95 backdrop-blur-lg rounded-2xl border border-primary/10 shadow-lg p-4 hidden" id="mobile-menu">
-                <nav class="flex flex-col space-y-2">
-                    <a href="#features" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Özellikler</a>
-                    <a href="#phases" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Geliştirme</a>
-                    <a href="#target" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Hedef Kitle</a>
-                    <a href="#mission" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">Misyon</a>
-                    <a href="#contact" class="mobile-nav-link px-4 py-3 text-gray-700 hover:text-primary font-medium transition-all duration-300 rounded-xl hover:bg-primary/10">İletişim</a>
-                </nav>
-            </div>
         </div>
     </header>
 
@@ -152,7 +123,7 @@
         <!-- Features Section -->
         <section id="features" class="py-20 bg-gradient-to-br from-gray-50 to-white">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
+                <div class="text-center">
                     <h2 class="text-4xl md:text-5xl font-bold heading-modern mb-6 flex items-center justify-center gap-4">
                         <i class="ph-duotone ph-lightning text-5xl icon-modern"></i>
                         %100 Elektrikli Geleceğin Adresi
@@ -161,141 +132,9 @@
                         Sadece tam elektrikli araçlar için özel olarak tasarlanmış platform
                     </p>
                 </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
-                    <div class="premium-card">
-                        <i class="ph-duotone ph-car text-5xl icon-car mb-6 block"></i>
-                        <h3 class="text-2xl font-bold premium-card-title mb-4">Elektrikli Araç İlanları</h3>
-                        <p class="premium-card-content">
-                            Sadece tam elektrikli araçlar için özel ilan sistemi. 
-                            Tesla, BMW i3, Nissan Leaf ve diğer tüm EV modelleri.
-                            Detaylı filtreleme ve karşılaştırma özellikleri.
-                        </p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="premium-card">
-                        <i class="ph-duotone ph-lightning text-5xl icon-lightning mb-6 block"></i>
-                        <h3 class="text-2xl font-bold premium-card-title mb-4">Şarj İstasyonu Haritası</h3>
-                        <p class="premium-card-content">
-                            Türkiye geneli elektrikli araç şarj noktaları. 
-                            Gerçek zamanlı durum, rezervasyon ve rota planlama.
-                            Hızlı şarj ve normal şarj seçenekleri.
-                        </p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="premium-card">
-                        <i class="ph-duotone ph-car-profile text-5xl icon-profile mb-6 block"></i>
-                        <h3 class="text-2xl font-bold premium-card-title mb-4">Kapsamlı Araç Veritabanı</h3>
-                        <p class="premium-card-content">
-                            Detaylı elektrikli araç özellikleri, menzil bilgileri, 
-                            şarj süreleri ve kullanıcı deneyimleri. 
-                            Gerçek kullanıcı yorumları ve puanlamaları.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
 
-        <!-- Phase Section -->
-        <section id="phases" class="py-20 bg-gradient-to-br from-gray-50 to-light-blue/30">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 fade-in">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 flex items-center justify-center gap-4">
-                        <i class="ph-duotone ph-rocket-launch text-5xl icon-rocket"></i>
-                        Geliştirme Aşamaları
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Platformun geliştirilme süreci ve gelecek planları
-                    </p>
-                </div>
-
-                <!-- Phase 1 - Current Phase -->
-                <div class="mb-16">
-                    <div class="text-center mb-12">
-                        <div class="inline-flex items-center gap-3 bg-primary text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg mb-4">
-                            <i class="ph-duotone ph-check-circle text-2xl"></i>
-                            1. Faz - Mevcut (2024)
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">İlk Lansman - Temel Özellikler</h3>
-                        <p class="text-gray-600 max-w-2xl mx-auto">
-                            Platformun temel işlevlerini kapsayan ilk sürüm
-                        </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car text-2xl icon-car"></i>
-                                Sıfır & İkinci El Elektrikli Araç İlanları
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">Sadece tam elektrikli araçlar için özel ilan sistemi</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-primary hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-car-profile text-2xl icon-profile"></i>
-                                Kapsamlı Araç Veritabanı
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">Kapsamlı %100 elektrikli araç veritabanı ve karşılaştırma</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Phase 2 - Future Phase -->
-                <div class="mb-16">
-                    <div class="text-center mb-12">
-                        <div class="inline-flex items-center gap-3 bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg mb-4">
-                            <i class="ph-duotone ph-clock text-2xl"></i>
-                            2. Faz - Gelecek (2025)
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Gelişmiş Özellikler - Coming Soon</h3>
-                        <p class="text-gray-600 max-w-2xl mx-auto">
-                            Platformu daha da güçlendirecek gelişmiş özellikler
-                        </p>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-lightning text-2xl icon-lightning"></i>
-                                Şarj İstasyonu Haritası
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">Türkiye geneli elektrikli araç şarj noktaları ve rotası planlama</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-users text-2xl icon-users"></i>
-                                EV Sahipleri Topluluğu
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">Elektrikli araç sahipleri için özel forum ve etkinlik platformu</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-wrench text-2xl icon-wrench"></i>
-                                EV Servis & Bakım Ağı
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">Elektrikli araçlara özel servis ve bakım hizmetleri</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-chart-line text-2xl icon-chart"></i>
-                                Akıllı Analitik Dashboard
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">Elektrikli araç performans analizi ve enerji tasarrufu önerileri</p>
-                        </div>
-                        <div class="group bg-gradient-to-br from-white to-gray-50/50 p-8 rounded-3xl shadow-xl shadow-primary/5 border-l-4 border-gray-400 hover:shadow-2xl hover:shadow-primary/10 transform hover:-translate-y-2 transition-all duration-500">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-3">
-                                <i class="ph-duotone ph-mobile text-2xl icon-mobile"></i>
-                                Mobil Uygulama
-                            </h4>
-                            <p class="text-gray-600 leading-relaxed">iOS ve Android için kapsamlı mobil uygulama</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Target Audience Section -->
         <section id="target" class="py-20 bg-white">
