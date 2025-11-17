@@ -16,6 +16,7 @@ class BabubaApp {
     this.setupHeaderScroll();
     this.setupMobileMenu();
     this.setupActiveNavigation();
+    this.setupNewsletter();
   }
 
   // Language Management
@@ -397,6 +398,115 @@ class BabubaApp {
         document.body.removeChild(notification);
       }, 300);
     }, 3000);
+  }
+
+  // Newsletter Management
+  setupNewsletter() {
+    const newsletterBtn = document.getElementById('newsletter-btn');
+    const newsletterModal = document.getElementById('newsletter-modal');
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterCloseBtn = document.getElementById('newsletter-close-btn');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+    const newsletterSuccessClose = document.getElementById('newsletter-success-close');
+
+    if (!newsletterBtn || !newsletterModal) return;
+
+    // Open modal
+    newsletterBtn.addEventListener('click', () => {
+      newsletterModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    });
+
+    // Close modal
+    const closeModal = () => {
+      newsletterModal.classList.add('hidden');
+      document.body.style.overflow = '';
+      // Reset form
+      if (newsletterForm) newsletterForm.reset();
+      if (newsletterSuccess) newsletterSuccess.classList.add('hidden');
+      if (newsletterForm) newsletterForm.classList.remove('hidden');
+    };
+
+    if (newsletterCloseBtn) {
+      newsletterCloseBtn.addEventListener('click', closeModal);
+    }
+
+    if (newsletterSuccessClose) {
+      newsletterSuccessClose.addEventListener('click', closeModal);
+    }
+
+    // Close on background click
+    newsletterModal.addEventListener('click', (e) => {
+      if (e.target === newsletterModal) {
+        closeModal();
+      }
+    });
+
+    // Handle form submission
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const emailInput = document.getElementById('newsletter-email');
+        const submitBtn = document.getElementById('newsletter-submit-btn');
+        
+        if (!emailInput || !submitBtn) return;
+
+        const email = emailInput.value.trim();
+        
+        // Disable button and show loading state
+        const originalText = submitBtn.textContent;
+        const loadingTexts = {
+          'tr': 'Gönderiliyor...',
+          'en': 'Sending...',
+          'zh': '发送中...',
+          'ar': 'جارٍ الإرسال...'
+        };
+        submitBtn.textContent = loadingTexts[this.currentLanguage] || 'Sending...';
+        submitBtn.disabled = true;
+
+        try {
+          // Call API
+          const response = await fetch('https://api-dev.waponi.app/api/v1/newsletters/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              Email: email
+            })
+          });
+
+          if (response.ok) {
+            // Show success message
+            newsletterForm.classList.add('hidden');
+            if (newsletterSuccess) newsletterSuccess.classList.remove('hidden');
+          } else {
+            // Handle error
+            const errorMessages = {
+              'tr': 'Bir hata oluştu. Lütfen tekrar deneyin.',
+              'en': 'An error occurred. Please try again.',
+              'zh': '发生错误。请重试。',
+              'ar': 'حدث خطأ. يرجى المحاولة مرة أخرى.'
+            };
+            this.showNotification(errorMessages[this.currentLanguage] || 'An error occurred. Please try again.', 'error');
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+          }
+        } catch (error) {
+          console.error('Newsletter subscription error:', error);
+          const errorMessages = {
+            'tr': 'Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.',
+            'en': 'Connection error. Please check your internet connection.',
+            'zh': '连接错误。请检查您的互联网连接。',
+            'ar': 'خطأ في الاتصال. يرجى التحقق من اتصالك بالإنترنت.'
+          };
+          this.showNotification(errorMessages[this.currentLanguage] || 'Connection error.', 'error');
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
   }
 
   // Form handling (for future contact forms)

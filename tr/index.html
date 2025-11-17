@@ -137,18 +137,68 @@
                         başlıyor.
                     </p>
 
-                    <div
-                        class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
-                        <a
-                            href="mailto:info@babuba.com?subject=Haberdar Ol&body=Merhaba, Babuba.com hakkında bilgi almak istiyorum."
-                            class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
-                            Haberdar Ol
-                        </a>
-                        <a href="#contact"
-                            class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
-                            İşbirliği
-                        </a>
+                <div
+                    class="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in hero-buttons">
+                    <button
+                        id="newsletter-btn"
+                        class="hero-btn-primary px-10 py-4 text-lg text-white rounded-2xl font-semibold hover:scale-105 transition-all duration-300 relative">
+                        Haberdar Ol
+                    </button>
+                    <a href="#contact"
+                        class="hero-btn-secondary px-10 py-4 text-primary rounded-2xl font-semibold text-lg hover:scale-105 transition-all duration-300 relative">
+                        İşbirliği
+                    </a>
+                </div>
+
+                <!-- Newsletter Modal -->
+                <div id="newsletter-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999] hidden">
+                    <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl transform transition-all">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Haberdar Ol</h3>
+                        <p class="text-gray-600 mb-6">E-posta adresinizi girerek Babuba.com'dan haberdar olun!</p>
+                        
+                        <form id="newsletter-form" class="space-y-4">
+                            <div>
+                                <input
+                                    type="email"
+                                    id="newsletter-email"
+                                    placeholder="E-posta adresiniz"
+                                    required
+                                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary focus:outline-none transition-colors"
+                                />
+                            </div>
+                            
+                            <div class="flex gap-3">
+                                <button
+                                    type="submit"
+                                    class="flex-1 bg-primary text-white px-6 py-3 rounded-xl font-semibold hover:bg-dark-blue transition-colors"
+                                    id="newsletter-submit-btn">
+                                    Abone Ol
+                                </button>
+                                <button
+                                    type="button"
+                                    id="newsletter-close-btn"
+                                    class="px-6 py-3 bg-gray-200 text-gray-700 rounded-xl font-semibold hover:bg-gray-300 transition-colors">
+                                    İptal
+                                </button>
+                            </div>
+                        </form>
+
+                        <div id="newsletter-success" class="hidden">
+                            <div class="text-center py-4">
+                                <svg class="w-16 h-16 text-green-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Başarılı!</h4>
+                                <p class="text-gray-600 mb-4">E-posta bültenimize başarıyla abone oldunuz.</p>
+                                <button
+                                    id="newsletter-success-close"
+                                    class="bg-primary text-white px-8 py-2 rounded-xl font-semibold hover:bg-dark-blue transition-colors">
+                                    Tamam
+                                </button>
+                            </div>
+                        </div>
                     </div>
+                </div>
                 </div>
             </section>
 
